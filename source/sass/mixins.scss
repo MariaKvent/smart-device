@@ -1,0 +1,20 @@
+@mixin inner($width, $padding) {
+  width: $width;
+  margin: 0 auto;
+  padding: 0 $padding;
+}
+
+@mixin fonts ($font-weight, $font-size, $line-height) {
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: $font-weight;
+  font-size: $font-size;
+  line-height: $line-height;
+  font-display: swap;
+}
+
+@mixin link ($color) {
+  text-decoration: none;
+  color: $color;
+  cursor: pointer;
+}

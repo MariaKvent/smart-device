@@ -1,0 +1,38 @@
+.page-header {
+  position: relative;
+  background-color: $black;
+  width: 1410px;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  margin: 33px auto 0 auto;
+  z-index: 2;
+}
+
+.page-header__logo {
+  display: flex;
+  width: 20%;
+}
+
+.page-header__logo-text {
+  margin-top: 4px;
+  margin-left: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-header__logo-text-big {
+  @include fonts(700, 25px, 29px);
+  color: $white;
+}
+
+.page-header__logo-text-small {
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 12px;
+  line-height: 14px;
+  color: $gray;
+}
+
+.page-header__burger {
+  width: 30%;
+}

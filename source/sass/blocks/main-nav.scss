@@ -1,0 +1,49 @@
+.main-nav {
+  display: flex;
+  width: 50%;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.main-nav__email {
+  font-size: 16px;
+  line-height: 18px;
+  color: $white;
+  width: 33%;
+  display: flex;
+  justify-content: center;
+}
+
+.main-nav__email-text {
+  padding-left: 17px;
+}
+
+.main-nav__phone {
+  width: 33%;
+  font-size: 16px;
+  line-height: 18px;
+  color: $white;
+  display: flex;
+  justify-content: center;
+}
+
+.main-nav__phone-text {
+  padding-left: 17px;
+}
+
+.main-nav__button {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  width: 33%;
+}
+
+.button {
+  @include link($white);
+  background-color: transparent;
+  border: 1px solid $white;
+  border-radius: 5px;
+  padding: 14px 27px;
+  text-align: center;
+  // margin-left: 40px;
+}
