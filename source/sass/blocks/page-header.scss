@@ -1,11 +1,12 @@
 .page-header {
   position: relative;
-  background-color: $black;
-  width: 1410px;
+  background-color: transparent;
+  max-width: 1410px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   flex-wrap: wrap;
-  margin: 33px auto 0 auto;
+  margin: 0 auto;
+  padding-top: 33px;
   z-index: 2;
 }
 
@@ -31,8 +32,9 @@
   font-size: 12px;
   line-height: 14px;
   color: $gray;
+  text-transform: lowercase;
 }
 
 .page-header__burger {
-  width: 30%;
+  width: 10%;
 }

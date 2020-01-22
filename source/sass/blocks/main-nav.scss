@@ -1,6 +1,6 @@
 .main-nav {
   display: flex;
-  width: 50%;
+  // width: 50%;
   justify-content: flex-end;
   align-items: center;
 }
@@ -9,7 +9,7 @@
   font-size: 16px;
   line-height: 18px;
   color: $white;
-  width: 33%;
+  // width: 33%;
   display: flex;
   justify-content: center;
 }
@@ -19,12 +19,13 @@
 }
 
 .main-nav__phone {
-  width: 33%;
+  // width: 33%;
   font-size: 16px;
   line-height: 18px;
   color: $white;
   display: flex;
   justify-content: center;
+  padding-left: 88px;
 }
 
 .main-nav__phone-text {
@@ -35,15 +36,14 @@
   display: flex;
   justify-content: flex-end;
   flex-wrap: wrap;
-  width: 33%;
+  padding-left: 49px;
+  // width: 33%;
 }
 
-.button {
-  @include link($white);
-  background-color: transparent;
-  border: 1px solid $white;
-  border-radius: 5px;
-  padding: 14px 27px;
-  text-align: center;
-  // margin-left: 40px;
+.white-button {
+    @include fonts(700, 14px, 15px);
+    @include link($white);
+    background-color: transparent;
+    border: 1px solid $white;
+    padding: 14px 27px;
 }

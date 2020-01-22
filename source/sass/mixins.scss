@@ -1,4 +1,4 @@
-@mixin inner($width, $padding) {
+@mixin inner ($width, $padding) {
   width: $width;
   margin: 0 auto;
   padding: 0 $padding;

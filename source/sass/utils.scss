@@ -15,5 +15,19 @@ input[type="radio"].visually-hidden {
 
 img {
   max-width: 100%;
-  // height: auto;
+  height: auto;
+}
+
+.pic-container {
+  background: $dark-gray url("../../img/bg-main.png") no-repeat center;
+  background-size: cover;
+  width: 100%;
+  min-height: 878px;
+  z-index: -1;
+}
+
+.button {
+  text-transform: uppercase;
+  border-radius: 5px;
+  text-align: center;
 }
