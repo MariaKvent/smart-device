@@ -41,9 +41,9 @@
 }
 
 .white-button {
-    @include fonts(700, 14px, 15px);
-    @include link($white);
-    background-color: transparent;
-    border: 1px solid $white;
-    padding: 14px 27px;
+  @include fonts(700, 14px, 15px);
+  @include link($white);
+  background-color: transparent;
+  border: 1px solid $white;
+  padding: 14px 27px;
 }

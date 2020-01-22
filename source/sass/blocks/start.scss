@@ -9,9 +9,9 @@
 }
 
 .start__text-head {
+  @include fonts(700, 80px, 94px);
   margin: 0;
   padding-top: 231px;
-  @include fonts(700, 80px, 94px);
   text-transform: uppercase;
   letter-spacing: 2px;
 }
@@ -28,13 +28,13 @@
   max-width: 641px;
 
   &::before {
-    content: '';
+    content: "";
     display: block;
     width: 66px;
     height: 2px;
     position: absolute;
     background: url("../../img/line.png");
-    left: 0px;
+    left: 0;
     top: 68px;
   }
 }
