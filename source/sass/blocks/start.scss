@@ -13,7 +13,7 @@
   margin: 0;
   padding-top: 231px;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 0.07em;
 }
 
 .start__text-par {
@@ -24,8 +24,8 @@
   font-size: 22px;
   line-height: 156.8%;
   text-transform: lowercase;
-  padding-left: 66px;
-  max-width: 641px;
+  padding-left: 94px;
+  max-width: 613px;
 
   &::before {
     content: "";

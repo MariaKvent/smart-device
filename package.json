@@ -51,6 +51,7 @@
   },
   "dependencies": {
     "del": "^4.1.1",
+    "normalize.css": "^8.0.1",
     "npm": "^6.13.6"
   }
 }

@@ -18,6 +18,12 @@ img {
   height: auto;
 }
 
+hr {
+  color: #626962;
+  height: 1px;
+  margin: 0;
+}
+
 .pic-container {
   background: $dark-gray url("../../img/bg-main.png") no-repeat center;
   background-size: cover;

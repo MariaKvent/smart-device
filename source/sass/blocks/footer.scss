@@ -1,0 +1,140 @@
+.footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: 317px;
+  // display: flex;
+  // flex-direction: column;
+  // // justify-content: space-between;
+}
+
+.footer__about {
+  margin: 0 auto;
+  max-width: 1410px;
+  padding: 65px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__about-main {
+  // position: relative;
+  width: 20%;
+}
+
+.footer__logo {
+  display: flex;
+  margin-bottom: 53px;
+}
+
+.footer__logo-text {
+  margin-top: 4px;
+  margin-left: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__logo-text-big {
+  @include fonts(700, 25px, 29px);
+  color: $black;
+}
+
+.footer__logo-text-small {
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 12px;
+  line-height: 14px;
+  color: $gray;
+  text-transform: lowercase;
+}
+
+.footer__social_fb,
+.footer__social_ok {
+  padding-right: 5px;
+}
+
+.footer__header {
+  @include fonts(400, 15px, 16px);
+  letter-spacing: 1px;
+  color: $gray-black;
+  text-transform: uppercase;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-bottom: 29px;
+}
+
+.footer__about-site {
+  // margin-right: 150px;
+  // display: inline-block;
+  // width: 35%;
+}
+
+.footer__items {
+  display: flex;
+  flex-wrap: wrap;
+  font-family: "PT Mono", "Arial", sans-serif;
+  font-size: 15px;
+  line-height: 25px;
+  color: $gray-black;
+  opacity: 0.5;
+}
+
+.footer__items_col1,
+.footer__items_col2 {
+  list-style: none;
+  padding-inline-start: 0;
+  padding-right: 65px;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.footer__about-contacts {
+  width: 333px;
+}
+
+.footer__contact {
+  margin: 0;
+  font-family: "PT Mono", "Arial", sans-serif;
+  font-size: 15px;
+  line-height: 25px;
+  color: $gray-black;
+  opacity: 0.5;
+}
+
+.footer__copyright {
+  margin: 0 auto;
+  max-width: 1410px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-family: "PT Mono", "Arial", sans-serif;
+  color: $gray-black;
+  opacity: 0.5;
+  text-transform: uppercase;
+  font-size: 13px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  margin-bottom: 1em;
+}
+
+.copyright-container {
+  width: 33%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer__copyright-copy {
+  margin-block-end: 0;
+}
+
+.footer__copyright-conf {
+  margin-top: 1em;
+  width: 33%;
+  text-align: center;
+  display: block;
+}
+
+.footer__copyright-dev {
+  width: 33%;
+  text-align: right;
+  margin-block-end: 0;
+}
