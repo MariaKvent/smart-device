@@ -138,3 +138,13 @@
   text-align: right;
   margin-block-end: 0;
 }
+
+@media (max-width: $tablet) {
+  .footer__about {
+    @include inner(1023px, 25px);
+    padding-top: 20px;
+  }
+  .footer__copyright {
+    @include inner(1023px, 25px);
+  }
+}

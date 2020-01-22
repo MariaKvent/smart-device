@@ -38,3 +38,10 @@
 .page-header__burger {
   width: 10%;
 }
+
+@media (max-width: $tablet) {
+  .page-header {
+    @include inner(1023px, 25px);
+    padding-top: 20px;
+  }
+}
