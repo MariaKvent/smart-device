@@ -47,3 +47,16 @@
   border: 1px solid $white;
   padding: 14px 27px;
 }
+
+@media (max-width: $tablet) {
+  .main-nav__email-text,
+  .main-nav__phone-text,
+  .main-nav__button {
+    display: none;
+    padding-left: 0;
+  }
+
+  .main-nav__phone {
+    padding-left: 0;
+  }
+}

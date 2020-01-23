@@ -37,3 +37,11 @@ hr {
   border-radius: 5px;
   text-align: center;
 }
+
+@media (max-width: $tablet) {
+  .pic-container {
+    background: $dark-gray url("../../img/bg-main-tablet.png") no-repeat center;
+    background-size: cover;
+    min-height: 520px;
+  }
+}
