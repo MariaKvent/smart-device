@@ -1,0 +1,126 @@
+.company {
+  max-width: 1170px;
+  padding-top: 55px;
+  padding-bottom: 55px;
+  margin: 0 auto;
+}
+
+.company__about {
+  padding-left: 178px;
+  position: relative;
+  margin-bottom: 44px;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 220px;
+    height: 317px;
+    position: absolute;
+    background: url("../../img/2005.png") no-repeat;
+    left: 0;
+    top: 5px;
+  }
+}
+
+.company__about h2 {
+  @include fonts(400, 36px, 140.6%);
+  color: $dark-gray;
+  margin-block-start: 0;
+  margin-block-end: 20px;
+}
+
+.company__about p {
+  font-size: 16px;
+  line-height: 22px;
+  color: $dark-gray;
+  margin-block-start: 0;
+  margin-block-end: 20px;
+}
+
+.company__about-button {
+  @include link($blue);
+  @include fonts(700, 14px, 16px);
+  background-color: transparent;
+  border: 1px solid $blue;
+  padding: 14px 50px;
+  letter-spacing: 0.05em;
+  margin-left: 178px;
+}
+
+@media (max-width: $tablet) {
+  .company {
+    @include inner(1023px, 25px);
+    padding-top: 10px;
+    padding-bottom: 83px;
+  }
+
+  .company__about {
+    padding-left: 183px;
+    position: relative;
+    margin-bottom: 45px;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 131px;
+      height: 344px;
+      position: absolute;
+      background: url("../../img/2005.png") no-repeat;
+      background-size: contain;
+      left: 0;
+      top: 5px;
+    }
+  }
+
+  .company__about h2 {
+    font-size: 32px;
+    margin-block-end: 20px;
+  }
+
+  .company__about p {
+    font-size: 16px;
+    line-height: 22px;
+    color: $dark-gray;
+    margin-block-start: 0;
+    margin-block-end: 20px;
+  }
+
+  .company__about span {
+    display: none;
+  }
+
+  .company__about-button {
+    margin-left: 183px;
+  }
+}
+
+@media (max-width: $mobile) {
+  .company {
+    @include inner(767px, 15px);
+    padding-top: 10px;
+    padding-bottom: 65px;
+  }
+
+  .company__about {
+    padding-left: 0;
+    position: relative;
+    margin-bottom: 45px;
+
+    &::before {
+      content: "";
+      display: none;
+    }
+  }
+
+  .company__about h2 {
+    font-size: 28px;
+  }
+
+  .company__about p {
+    margin-block-end: 45px;
+  }
+
+  .company__about-button {
+    margin-left: 0;
+  }
+}
