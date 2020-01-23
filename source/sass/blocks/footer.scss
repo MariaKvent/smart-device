@@ -22,6 +22,7 @@
 }
 
 .footer__logo {
+  @include link($white);
   display: flex;
   margin-bottom: 53px;
 }
