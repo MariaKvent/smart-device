@@ -45,3 +45,11 @@ hr {
     min-height: 520px;
   }
 }
+
+@media (max-width: $mobile) {
+  .pic-container {
+    background: $dark-gray url("../../img/bg-main-mobile.png") no-repeat center;
+    background-size: cover;
+    min-height: 647px;
+  }
+}
