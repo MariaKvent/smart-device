@@ -32,9 +32,9 @@
 }
 
 .adv__items h3 {
+  @include fonts(400, 24px, 140.6%);
   margin-block-start: 0;
   margin-block-end: 15px;
-  @include fonts(400, 24px, 140.6%);
   color: $blue;
 }
 
