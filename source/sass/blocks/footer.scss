@@ -14,18 +14,28 @@
   padding: 65px 0;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .footer__about-main {
-  // position: relative;
-  width: 20%;
+  width: 17%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .footer__logo {
   @include link($white);
   display: flex;
   margin-bottom: 53px;
+  // padding-right: 20px;
+  width: 218px;
 }
+
+// .footer__logo-img img {
+//   width: 100%;
+// }
 
 .footer__logo-text {
   margin-top: 4px;
@@ -52,9 +62,10 @@
   padding-right: 5px;
 }
 
-.footer__header {
+.footer__about-site p,
+.footer__about-contacts p {
   @include fonts(400, 15px, 16px);
-  letter-spacing: 1px;
+  letter-spacing: 0.05em;
   color: $gray-black;
   text-transform: uppercase;
   margin-block-start: 0;
@@ -62,7 +73,8 @@
   margin-bottom: 29px;
 }
 
-.footer__about-site {
+.footer__about-site p {
+  // padding-left: 65px;
   // margin-right: 150px;
   // display: inline-block;
   // width: 35%;
@@ -71,33 +83,38 @@
 .footer__items {
   display: flex;
   flex-wrap: wrap;
+}
+
+.footer__items ul {
+  list-style: none;
+  padding-inline-start: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
   font-family: "PT Mono", "Arial", sans-serif;
   font-size: 15px;
   line-height: 25px;
   color: $gray-black;
   opacity: 0.5;
-}
+  letter-spacing: 0.03em;
 
-.footer__items_col1,
-.footer__items_col2 {
-  list-style: none;
-  padding-inline-start: 0;
-  padding-right: 65px;
-  margin-block-start: 0;
-  margin-block-end: 0;
+  &:not(:first-child) {
+    padding-left: 65px;
+  }
 }
 
 .footer__about-contacts {
   width: 333px;
 }
 
-.footer__contact {
+.footer__contact p {
   margin: 0;
   font-family: "PT Mono", "Arial", sans-serif;
   font-size: 15px;
   line-height: 25px;
   color: $gray-black;
   opacity: 0.5;
+  letter-spacing: normal;
+  text-transform: none;
 }
 
 .footer__copyright {
@@ -112,7 +129,7 @@
   text-transform: uppercase;
   font-size: 13px;
   line-height: 24px;
-  letter-spacing: 0.2px;
+  letter-spacing: 0.04em;
   margin-bottom: 1em;
 }
 
@@ -123,20 +140,18 @@
   justify-content: space-between;
 }
 
-.footer__copyright-copy {
+.copyright-container p {
   margin-block-end: 0;
 }
 
 .footer__copyright-conf {
   margin-top: 1em;
   width: 33%;
-  text-align: center;
+  text-align: left;
   display: block;
 }
 
-.footer__copyright-dev {
-  width: 33%;
-  text-align: right;
+.footer__copyright p {
   margin-block-end: 0;
 }
 
@@ -145,6 +160,7 @@
     @include inner(1023px, 25px);
     padding-top: 20px;
   }
+
   .footer__copyright {
     @include inner(1023px, 25px);
   }

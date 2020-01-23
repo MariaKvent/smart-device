@@ -1,6 +1,8 @@
 .start {
   margin: 0 auto;
   max-width: 1410px;
+  padding-top: 231px;
+  padding-bottom: 278px;
 }
 
 .start__text {
@@ -8,17 +10,16 @@
   color: $white;
 }
 
-.start__text-head {
+.start__text h1 {
   @include fonts(700, 80px, 94px);
   margin: 0;
-  padding-top: 231px;
   text-transform: uppercase;
   letter-spacing: 0.07em;
+  margin-bottom: 51px;
 }
 
-.start__text-par {
+.start__text p {
   margin: 0;
-  padding-top: 51px;
   position: relative;
   font-family: "PT Mono", "Arial", sans-serif;
   font-size: 22px;
@@ -26,6 +27,7 @@
   text-transform: lowercase;
   padding-left: 94px;
   max-width: 613px;
+  margin-bottom: 53px;
 
   &::before {
     content: "";
@@ -33,18 +35,16 @@
     width: 66px;
     height: 2px;
     position: absolute;
-    background: url("../../img/line.png");
+    background: url("../../img/line.png") no-repeat;
     left: 0;
-    top: 68px;
+    top: 16px;
   }
 }
 
 .start__text-button-container {
-  padding-top: 53px;
   padding-left: 94px;
   display: flex;
   flex-wrap: wrap;
-  padding-bottom: 278px;
 }
 
 .start__text-button {
@@ -62,7 +62,7 @@
   line-height: 15px;
   opacity: 0.5;
   width: 93px;
-  top: -127px;
+  top: 140px;
   left: -35px;
   color: $white;
   position: relative;

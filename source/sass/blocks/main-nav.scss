@@ -17,7 +17,8 @@
     width: 19px;
     height: 14px;
     position: absolute;
-    background: url("../../img/env.png");
+    background: url("../../img/env.png") no-repeat;
+    background-size: cover;
     left: -36px;
     top: 2px;
   }
@@ -37,13 +38,10 @@
     width: 18px;
     height: 18px;
     position: absolute;
-    background: url("../../img/phone.png");
+    background: url("../../img/phone.png") no-repeat;
+    background-size: 100%;
     left: -35px;
   }
-}
-
-.main-nav__phone-text {
-  padding-left: 17px;
 }
 
 .main-nav__button {
@@ -56,14 +54,36 @@
 }
 
 @media (max-width: $tablet) {
-  .main-nav__email-text,
-  .main-nav__phone-text,
   .main-nav__button {
     display: none;
-    padding-left: 0;
+  }
+
+  .main-nav__email {
+    font-size: 0;
+
+    &::before {
+      @include link($white);
+      width: 25px;
+      height: 19px;
+      top: -7px;
+    }
   }
 
   .main-nav__phone {
-    padding-left: 0;
+    font-size: 0;
+    left: 10px;
+    top: -10px;
+    margin-left: 43px;
+
+    &::before {
+      @include link($white);
+      width: 24px;
+      height: 24px;
+    }
   }
 }
+
+// @media (max-width: $tablet) {
+//
+//
+// }
