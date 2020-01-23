@@ -32,6 +32,14 @@ hr {
   z-index: -1;
 }
 
+.main-pic-container {
+  background: $white url("../../img/bg-white.png") no-repeat center;
+  background-size: cover;
+  width: 100%;
+  // min-height: 878px;
+  // z-index: -1;
+}
+
 .button {
   text-transform: uppercase;
   border-radius: 5px;

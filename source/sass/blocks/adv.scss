@@ -1,0 +1,94 @@
+.adv {
+  max-width: 1170px;
+  padding-top: 110px;
+  padding-bottom: 55px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.adv__items {
+  max-width: 49%;
+  background: $white;
+  border: 1px solid #ebebeb;
+  border-left: 2px solid $blue;
+  padding-top: 40px;
+  padding-bottom: 73px;
+  margin-bottom: 30px;
+}
+
+.adv__items_time,
+.adv__items_vendor,
+.adv__items_conf,
+.adv__items_price {
+  padding-right: 45px;
+  padding-left: 45px;
+}
+
+.adv__items svg {
+  margin-block-start: 0;
+  margin-block-end: 10px;
+}
+
+.adv__items h3 {
+  margin-block-start: 0;
+  margin-block-end: 15px;
+  @include fonts(400, 24px, 140.6%);
+  color: $blue;
+}
+
+.adv__items p {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  font-family: "PT Mono", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 134.4%;
+  color: $dark-gray;
+}
+
+.adv__items:hover,
+.adv__items:hover h3,
+.adv__items:hover p {
+  background-color: $blue;
+  color: $white;
+}
+
+.adv__items:hover path {
+  fill: $white;
+}
+
+@media (max-width: $tablet) {
+  .adv {
+    @include inner(1023px, 25px);
+    padding-top: 54px;
+    padding-bottom: 27px;
+  }
+
+  .adv__items {
+    max-width: 345px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    margin-bottom: 30px;
+  }
+
+  .adv__items_time,
+  .adv__items_vendor,
+  .adv__items_conf,
+  .adv__items_price {
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+}
+
+@media (max-width: $mobile) {
+  .adv {
+    @include inner(767px, 15px);
+    padding-top: 37px;
+    padding-bottom: 27px;
+  }
+
+  .adv__items h3 {
+    font-size: 20px;
+  }
+}

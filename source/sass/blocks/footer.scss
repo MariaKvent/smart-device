@@ -165,3 +165,11 @@
     @include inner(1023px, 25px);
   }
 }
+
+@media (max-width: $mobile) {
+  .footer__copyright {
+    @include inner(767px, 15px);
+    padding-top: 20px;
+    flex-direction: column;
+  }
+}
