@@ -1,31 +1,45 @@
 .main-nav {
   display: flex;
-  // width: 50%;
   justify-content: flex-end;
   align-items: center;
 }
 
 .main-nav__email {
+  @include link($white);
+  position: relative;
   font-size: 16px;
   line-height: 18px;
   color: $white;
-  // width: 33%;
-  display: flex;
-  justify-content: center;
-}
 
-.main-nav__email-text {
-  padding-left: 17px;
+  &::before {
+    content: "";
+    display: block;
+    width: 19px;
+    height: 14px;
+    position: absolute;
+    background: url("../../img/env.png");
+    left: -36px;
+    top: 2px;
+  }
 }
 
 .main-nav__phone {
-  // width: 33%;
+  @include link($white);
+  position: relative;
   font-size: 16px;
   line-height: 18px;
   color: $white;
-  display: flex;
-  justify-content: center;
-  padding-left: 88px;
+  margin-left: 122px;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    background: url("../../img/phone.png");
+    left: -35px;
+  }
 }
 
 .main-nav__phone-text {
@@ -33,19 +47,12 @@
 }
 
 .main-nav__button {
-  display: flex;
-  justify-content: flex-end;
-  flex-wrap: wrap;
-  padding-left: 49px;
-  // width: 33%;
-}
-
-.white-button {
   @include fonts(700, 14px, 15px);
   @include link($white);
   background-color: transparent;
   border: 1px solid $white;
   padding: 14px 27px;
+  margin-left: 49px;
 }
 
 @media (max-width: $tablet) {

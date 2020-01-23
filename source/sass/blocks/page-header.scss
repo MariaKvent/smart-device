@@ -8,11 +8,12 @@
   margin: 0 auto;
   padding-top: 33px;
   z-index: 2;
+  padding-bottom: 33px;
 }
 
 .page-header__logo {
+  @include link($white);
   display: flex;
-  width: 20%;
 }
 
 .page-header__logo-text {
