@@ -30,7 +30,7 @@
         <nav class="main-nav">
           <a class="main-nav__email" href="mailto:info@sd.ru">info@sd.ru</a>
           <a class="main-nav__phone" href="tel:+74950005252">+7 (495) 000 52 52</a>
-          <a href="#modal-phone" class="main-nav__button button">Заказать звонок</a>
+          <a class="main-nav__button button modal__toggle">Заказать звонок</a>
         </nav>
       </header>
       <section class="start">
@@ -234,7 +234,12 @@
         <p>Developed by wow studio</p>
       </div>
     </footer>
-    <div id="modal-phone">
+    <div class="modal modal_no-js" id="modal-phone">
+      <div class="modal__form">
+        <div>Форма</div>
+        <span class="modal__close"></span>
+      </div>
     </div>
+    <script src="js/script.js"></script>
   </body>
 </html>

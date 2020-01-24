@@ -86,7 +86,7 @@
 
 .form__button {
   @include link($white);
-  @include fonts(700, 14px, 16px)
+  @include fonts(700, 14px, 16px);
   letter-spacing: 0.05em;
   padding: 14px 80px;
   background-color: transparent;
@@ -213,16 +213,16 @@
     margin-block-end: 25px;
   }
 
-.question__form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
+  .question__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 
-.form__inputs {
-  margin: 0 auto;
-  flex-direction: column;
-}
+  .form__inputs {
+    margin: 0 auto;
+    flex-direction: column;
+  }
 
   .form__input {
     width: 258px;
@@ -240,18 +240,18 @@
     margin-bottom: 30px;
   }
 
-.form__button-wrapper {
-  flex-direction: column;
-}
+  .form__button-wrapper {
+    flex-direction: column;
+  }
 
-.form__button {
-  max-width: 290px;
-  padding: 14px 89px;
-  margin-bottom: 30px;
-  font-size: 14px;
-}
+  .form__button {
+    max-width: 290px;
+    padding: 14px 89px;
+    margin-bottom: 30px;
+    font-size: 14px;
+  }
 
-.form__checkbox {
-  margin-left: 18px;
-}
+  .form__checkbox {
+    margin-left: 18px;
+  }
 }

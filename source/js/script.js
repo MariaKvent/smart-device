@@ -1,15 +1,22 @@
 'use strict';
-var pageHeader = document.querySelector('.page-header');
-var headerToggle = document.querySelector('.page-header__toggle');
+var modalCall = document.querySelector('.modal');
+var modalToggle = document.querySelector('.modal__toggle');
+var modalClose = document.querySelector('.modal__close');
+var notScroll = document.querySelector('.page-body');
 
-pageHeader.classList.remove('page-header--nojs');
+modalToggle.addEventListener('click', function () {
+  modalCall.classList.remove('modal_no-js');
+  notScroll.classList.add('scroll-hidden');
+});
 
-headerToggle.addEventListener('click', function () {
-  if (pageHeader.classList.contains('page-header--closed')) {
-    pageHeader.classList.remove('page-header--closed');
-    pageHeader.classList.add('page-header--opened');
-  } else {
-    pageHeader.classList.add('page-header--closed');
-    pageHeader.classList.remove('page-header--opened');
+modalClose.addEventListener('click', function () {
+  modalCall.classList.add('modal_no-js');
+  notScroll.classList.remove('scroll-hidden');
+});
+
+document.addEventListener('keydown', function (evt) {
+  if (evt.keyCode === 27) {
+    modalCall.classList.add('modal_no-js');
+    notScroll.classList.remove('scroll-hidden');
   }
 });
