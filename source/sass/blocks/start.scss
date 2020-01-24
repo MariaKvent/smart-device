@@ -2,7 +2,7 @@
   margin: 0 auto;
   max-width: 1410px;
   padding-top: 231px;
-  padding-bottom: 278px;
+  padding-bottom: 276px;
 }
 
 .start__text {
@@ -71,6 +71,10 @@
   color: $white;
   position: relative;
   transform: rotate(-90deg);
+}
+
+.start__scroll a {
+  @include link($white);
 }
 
 @media (max-width: $tablet) {

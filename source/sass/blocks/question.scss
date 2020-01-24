@@ -31,6 +31,12 @@
   margin-block-end: 49px;
 }
 
+.form__inputs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 .form__input {
   font-family: "PT Mono", "Arial", sans-serif;
   font-size: 16px;
@@ -43,7 +49,7 @@
   margin-bottom: 40px;
   margin-right: 31px;
 
-  &:last-child {
+  &:nth-child(2n) {
     margin-right: 0;
   }
 }
@@ -71,7 +77,7 @@
   color: $white;
 }
 
-.qw {
+.form__button-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -80,6 +86,8 @@
 
 .form__button {
   @include link($white);
+  @include fonts(700, 14px, 16px)
+  letter-spacing: 0.05em;
   padding: 14px 80px;
   background-color: transparent;
   border: 1px solid $white;
@@ -133,4 +141,117 @@
       background: url("../../img/check.png") no-repeat 0 0;
     }
   }
+}
+
+@media (max-width: $tablet) {
+  .question {
+    @include inner(1023px, 25px);
+    padding-top: 83px;
+    padding-bottom: 103px;
+    background-image: none;
+    background-color: $blue;
+  }
+
+  .question__wrapper {
+    max-width: 591px;
+    margin: 0 auto;
+  }
+
+  .question__about {
+    padding-left: 0;
+  }
+
+  .question__about h2 {
+    @include fonts(400, 32px, 140.6%);
+    margin-block-start: 0;
+    margin-block-end: 15px;
+  }
+
+  .question__about p {
+    font-family: "PT Mono", "Arial", sans-serif;
+    margin-block-end: 51px;
+  }
+
+  .form__input {
+    width: 244px;
+    border: 0;
+    padding: 14px 17px;
+    margin-bottom: 40px;
+  }
+
+  .form__textarea {
+    padding: 14px 17px;
+    width: 94%;
+    height: 159px;
+    margin-bottom: 44px;
+  }
+
+  .form__button {
+    padding: 14px 85px;
+  }
+}
+
+@media (max-width: $mobile) {
+  .question {
+    @include inner(767px, 15px);
+    padding-top: 33px;
+    padding-bottom: 41px;
+  }
+
+  .question__wrapper {
+    min-width: 290px;
+    margin: 0 auto;
+  }
+
+  .question__about h2 {
+    @include fonts(400, 28px, 140.6%);
+    margin-block-start: 0;
+    margin-block-end: 16px;
+  }
+
+  .question__about p {
+    margin-block-end: 25px;
+  }
+
+.question__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form__inputs {
+  margin: 0 auto;
+  flex-direction: column;
+}
+
+  .form__input {
+    width: 258px;
+    border: 0;
+    padding: 14px 17px;
+    margin-bottom: 30px;
+    margin-right: 0;
+  }
+
+  .form__textarea {
+    margin: 0 auto;
+    padding: 14px 17px;
+    width: 256px;
+    height: 159px;
+    margin-bottom: 30px;
+  }
+
+.form__button-wrapper {
+  flex-direction: column;
+}
+
+.form__button {
+  max-width: 290px;
+  padding: 14px 89px;
+  margin-bottom: 30px;
+  font-size: 14px;
+}
+
+.form__checkbox {
+  margin-left: 18px;
+}
 }
