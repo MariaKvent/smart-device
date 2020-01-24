@@ -1,0 +1,136 @@
+.question {
+  padding-top: 96px;
+  padding-bottom: 113px;
+  background: url("../../img/bg-form.png") no-repeat;
+  background-size: cover;
+}
+
+.question__wrapper {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.question__about {
+  width: inherit;
+  padding-left: 50%;
+}
+
+.question__about h2 {
+  @include fonts(400, 36px, 140.6%);
+  color: $white;
+  margin-block-start: 0;
+  margin-block-end: 7px;
+}
+
+.question__about p {
+  font-family: "PT Mono", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 134.4%;
+  color: $white;
+  margin-block-start: 0;
+  margin-block-end: 49px;
+}
+
+.form__input {
+  font-family: "PT Mono", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 134.4%;
+  width: 238px;
+  border: 0;
+  background-color: #19baff;
+  opacity: 0.9;
+  padding: 14px 16px;
+  margin-bottom: 40px;
+  margin-right: 31px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.form__input::placeholder {
+  color: $white;
+}
+
+.form__textarea {
+  font-family: "PT Mono", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 134.4%;
+  color: $white;
+  border: 0;
+  background-color: #19baff;
+  opacity: 0.9;
+  padding: 14px 16px;
+  width: 93%;
+  height: 154px;
+  resize: none;
+  margin-bottom: 43px;
+}
+
+.form__textarea::placeholder {
+  color: $white;
+}
+
+.qw {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.form__button {
+  @include link($white);
+  padding: 14px 80px;
+  background-color: transparent;
+  border: 1px solid $white;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+.form__checkbox {
+  display: inline-block;
+  max-width: 230px;
+  min-height: 32px;
+  line-height: 15px;
+  margin-left: 40px;
+}
+
+.form__checkbox_label {
+  font-size: 14px;
+  line-height: 15px;
+  color: $white;
+  opacity: 0.8;
+}
+
+.form__checkbox_input {
+  visibility: hidden;
+  position: relative;
+  width: 0;
+  height: 0;
+
+  &::before {
+    visibility: visible;
+    position: absolute;
+    content: "";
+    width: 16px;
+    height: 16px;
+    background-color: transparent;
+    border: 1px solid #e5e5e5;
+    top: -25px;
+    left: -210px;
+    cursor: pointer;
+  }
+
+  &:checked {
+    &::after {
+      visibility: visible;
+      position: absolute;
+      content: "";
+      width: 8px;
+      height: 5px;
+      top: -20px;
+      left: -205px;
+      background: url("../../img/check.png") no-repeat 0 0;
+    }
+  }
+}
