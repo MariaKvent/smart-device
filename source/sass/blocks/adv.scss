@@ -1,20 +1,24 @@
 .adv {
-  max-width: 1170px;
-  padding-top: 110px;
-  padding-bottom: 25px;
+  max-width: 1172px;
+  padding-top: 112px;
+  padding-bottom: 40px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  align-content: stretch;
 }
 
 .adv__items {
-  max-width: 49%;
+  position: relative;
+  left: 3px;
+  max-width: 570px;
+  min-height: 232px;
   background: $white;
-  border: 1px solid #ebebeb;
-  border-left: 2px solid $blue;
+  outline: 1px solid #ebebeb;
+  border-left: 3px solid $blue;
   padding-top: 40px;
-  padding-bottom: 73px;
+  padding-bottom: 27px;
   margin-bottom: 30px;
 }
 
@@ -26,15 +30,19 @@
   padding-left: 45px;
 }
 
+.adv__items_conf {
+  padding-top: 5px;
+}
+
 .adv__items svg {
   margin-block-start: 0;
-  margin-block-end: 10px;
+  margin-block-end: 12px;
 }
 
 .adv__items h3 {
   @include fonts(400, 24px, 140.6%);
   margin-block-start: 0;
-  margin-block-end: 15px;
+  margin-block-end: 19px;
   color: $blue;
 }
 

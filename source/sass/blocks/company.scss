@@ -1,14 +1,14 @@
 .company {
-  max-width: 1170px;
-  padding-top: 55px;
-  padding-bottom: 110px;
+  max-width: 1172px;
+  padding-top: 37px;
+  padding-bottom: 120px;
   margin: 0 auto;
 }
 
 .company__about {
-  padding-left: 178px;
+  padding-left: 186px;
   position: relative;
-  margin-bottom: 44px;
+  margin-bottom: 50px;
 
   &::before {
     content: "";
@@ -17,7 +17,7 @@
     height: 317px;
     position: absolute;
     background: url("../../img/2005.png") no-repeat;
-    left: 0;
+    left: 6px;
     top: 5px;
   }
 }
@@ -44,7 +44,7 @@
   border: 1px solid $blue;
   padding: 14px 50px;
   letter-spacing: 0.05em;
-  margin-left: 178px;
+  margin-left: 186px;
 }
 
 @media (max-width: $tablet) {

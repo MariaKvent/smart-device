@@ -14,7 +14,7 @@ modalClose.addEventListener('click', function () {
   notScroll.classList.remove('scroll-hidden');
 });
 
-document.addEventListener('keydown', function(evt) {
+document.addEventListener('keydown', function (evt) {
   if (evt.keyCode === 27) {
     modalCall.classList.add('modal_no-js');
     notScroll.classList.remove('scroll-hidden');
