@@ -5,16 +5,17 @@
   overflow: hidden;
   position: fixed;
   top: 0;
+  left: 3px;
   z-index: 3;
 }
 
-.modal__form {
+.modal__wrapper {
   position: relative;
   opacity: 1;
   margin: 0 auto;
-  width: 490px;
-  height: 650px;
-  padding: 10px;
+  width: 412px;
+  height: 543px;
+  padding: 31px 39px;
   background: $blue;
   top: 136px;
   z-index: 4;
@@ -24,22 +25,138 @@
   display: none;
 }
 
+.modal__wrapper h2 {
+  @include fonts(400, 28px, 140.6%);
+  color: $white;
+  margin-block-start: 0;
+  margin-block-end: 12px;
+}
+
+.modal__wrapper p {
+  font-family: "PT Mono", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 134.4%;
+  color: $white;
+  width: 384px;
+  margin-block-start: 0;
+  margin-block-end: 33px;
+}
+
+.modal__input {
+  font-family: "PT Mono", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 134.4%;
+  width: 363px;
+  border: 0;
+  background-color: #19baff;
+  opacity: 0.9;
+  padding: 16px 24px;
+  margin-bottom: 29px;
+}
+
+.modal__input::placeholder {
+  color: $white;
+}
+
+.modal__textarea {
+  font-family: "PT Mono", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 134.4%;
+  color: $white;
+  border: 0;
+  background-color: #19baff;
+  opacity: 0.9;
+  padding: 14px 24px;
+  width: 363px;
+  height: 77px;
+  resize: none;
+  margin-bottom: 20px;
+}
+
+.modal__textarea::placeholder {
+  color: $white;
+}
+
+.modal__button-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.modal__button {
+  @include link($white);
+  @include fonts(700, 14px, 16px);
+  letter-spacing: 0.05em;
+  padding: 15px 167px;
+  background-color: transparent;
+  border: 1px solid $white;
+  border-radius: 5px;
+  margin-bottom: 33px;
+}
+
+.modal__checkbox {
+  display: inline-block;
+  width: 333px;
+  line-height: 15px;
+  margin-left: 49px;
+}
+
+.modal__checkbox_label {
+  font-size: 14px;
+  line-height: 15px;
+  color: $white;
+  opacity: 0.8;
+}
+
+.modal__checkbox_input {
+  visibility: hidden;
+  position: relative;
+  width: 0;
+  height: 0;
+
+  &::before {
+    visibility: visible;
+    position: absolute;
+    content: "";
+    width: 15px;
+    height: 15px;
+    background-color: transparent;
+    border: 1px solid #e5e5e5;
+    top: -25px;
+    left: -112px;
+    cursor: pointer;
+  }
+
+  &:checked {
+    &::after {
+      visibility: visible;
+      position: absolute;
+      content: "";
+      width: 8px;
+      height: 5px;
+      top: -20px;
+      left: -108px;
+      background: url("../../img/check.png") no-repeat 0 0;
+    }
+  }
+}
+
 .modal__close {
   position: absolute;
   right: 25px;
-  top: 20px;
-  width: 25px;
-  height: 25px;
+  top: 18px;
+  width: 20px;
+  height: 20px;
   opacity: 1;
 
   &::before,
   &::after {
     position: absolute;
     content: "";
-    height: 16px;
+    height: 22px;
     width: 1px;
-    left: 12px;
-    top: 3px;
+    left: 16px;
     background-color: $white;
   }
 
