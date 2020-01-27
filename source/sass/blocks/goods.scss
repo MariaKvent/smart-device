@@ -77,15 +77,15 @@
 @media (max-width: $tablet) {
   .goods {
     @include inner(1023px, 25px);
-    padding-top: 53px;
+    padding-top: 50px;
     padding-bottom: 78px;
   }
 
   .goods__about h2 {
     @include fonts(400, 32px, 140.6%);
     margin-block-start: 0;
-    margin-block-end: 46px;
-    max-width: 613px;
+    margin-block-end: 50px;
+    max-width: 615px;
   }
 
   .goods__items {
@@ -97,11 +97,16 @@
 
   .goods__item {
     width: 100%;
-    min-height: 256px;
+    min-height: 197px;
     position: relative;
-    padding-top: 53px;
+    padding-top: 40px;
     padding-bottom: 20px;
     margin-bottom: 46px;
+    margin-left: 0;
+
+    &:first-child {
+      margin-left: 0;
+    }
 
     &:last-child {
       margin-bottom: 0;
@@ -120,22 +125,28 @@
     &_parts {
       background: url("../../img/pic-3-tablet.png") no-repeat;
       background-size: cover;
+      padding-top: 50px;
+      min-height: 185px;
     }
+  }
+
+  .goods__items h3 {
+    padding-left: 45px;
   }
 }
 
 @media (max-width: $mobile) {
   .goods {
     @include inner(767px, 15px);
-    padding-top: 53px;
-    padding-bottom: 64px;
+    padding-top: 50px;
+    padding-bottom: 66px;
   }
 
   .goods__about h2 {
     @include fonts(400, 28px, 140.6%);
     max-width: 280px;
     margin-block-start: 0;
-    margin-block-end: 37px;
+    margin-block-end: 42px;
     padding-left: 10px;
   }
 
@@ -145,7 +156,9 @@
 
   .goods__item {
     width: 100%;
-    padding-top: 23px;
+    min-width: 290px;
+    padding-top: 20px;
+    padding-bottom: 38px;
     margin-bottom: 30px;
 
     &_produce {
@@ -161,6 +174,7 @@
     &_parts {
       background: url("../../img/pic-3-mobile.png") no-repeat;
       background-size: cover;
+      padding-top: 33px;
     }
   }
 }

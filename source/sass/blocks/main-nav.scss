@@ -67,6 +67,7 @@
       width: 25px;
       height: 19px;
       top: -7px;
+      left: -40px;
     }
   }
 
@@ -84,7 +85,16 @@
   }
 }
 
-// @media (max-width: $tablet) {
-//
-//
-// }
+@media (max-width: $mobile) {
+  .main-nav__email {
+    font-size: 0;
+
+    &::before {
+      @include link($white);
+      width: 25px;
+      height: 19px;
+      top: -7px;
+      left: -30px;
+    }
+  }
+}

@@ -147,15 +147,15 @@
             <p>Мы проконсультируем Вас бесплатно</p>
             <form class="form question__form" action="http://echo.htmlacademy.ru" method="post">
               <div class="form__inputs">
-                <input class="form__input" id="name" type="text" name="name" placeholder="Имя" required>
-                <input class="form__input" id="tel" type="tel" name="tel" placeholder="Телефон" required>
+                <input class="form__input" id="form-name" type="text" name="name" placeholder="Имя" required>
+                <input class="form__input" id="form-tel" type="tel" name="tel" placeholder="Телефон" required>
               </div>
-              <textarea class="form__textarea" name="text" placeholder="Ваш вопрос"></textarea>
+              <textarea class="form__textarea" id="form-text" name="text" placeholder="Ваш вопрос"></textarea>
               <div class="form__button-wrapper">
                 <button class="form__button button" type="submit" name="button">Задать вопрос</button>
                 <div class="form__checkbox">
                   <label class="form__checkbox_label">Я согласен на обработку персональных данных
-                    <input class="form__checkbox_input" type="checkbox" name="gain1" checked>
+                    <input class="form__checkbox_input" type="checkbox" name="agree" checked>
                   </label>
                 </div>
               </div>
@@ -234,26 +234,26 @@
         <p>Developed by wow studio</p>
       </div>
     </footer>
-    <div class="modal modal_no-js" id="modal-phone">
+    <div class="modal modal_hide" id="modal-phone">
       <div class="modal__wrapper">
           <h2>Закажите звонок</h2>
           <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
           <form class="modal__form" action="http://echo.htmlacademy.ru" method="post">
             <div class="modal__inputs">
-              <input class="modal__input" id="name" type="text" name="name" placeholder="Имя" required>
-              <input class="modal__input" id="tel" type="tel" name="tel" placeholder="Телефон" required>
+              <input class="modal__input" id="modal-name" type="text" name="modal-name" placeholder="Имя" required>
+              <input class="modal__input" id="modal-tel" type="tel" name="modal-tel" placeholder="Телефон" pattern="[0-9]" max="10" required>
             </div>
-            <textarea class="modal__textarea" name="text" placeholder="Ваш вопрос"></textarea>
+            <textarea class="modal__textarea" id="modal-text" name="modal-text" placeholder="Ваш вопрос"></textarea>
             <div class="modal__button-wrapper">
-              <button class="modal__button button" type="submit" name="button">Отправить</button>
+              <button class="modal__button button" type="submit" name="modal-button">Отправить</button>
               <div class="modal__checkbox">
                 <label class="modal__checkbox_label">Я согласен на обработку персональных данных
-                  <input class="modal__checkbox_input" type="checkbox" name="gain1" checked>
+                    <input class="modal__checkbox_input" type="checkbox" name="modal-agree" checked>
                 </label>
               </div>
             </div>
           </form>
-        <span class="modal__close" tabindex="0"></span>
+        <span class="modal__closed" tabindex="0"></span>
       </div>
     </div>
     <script src="js/script.js"></script>

@@ -50,31 +50,31 @@
 @media (max-width: $tablet) {
   .company {
     @include inner(1023px, 25px);
-    padding-top: 10px;
-    padding-bottom: 83px;
+    padding-top: 11px;
+    padding-bottom: 93px;
   }
 
   .company__about {
-    padding-left: 183px;
+    padding-left: 187px;
     position: relative;
-    margin-bottom: 45px;
+    margin-bottom: 52px;
 
     &::before {
       content: "";
       display: block;
-      width: 131px;
-      height: 344px;
+      width: 135px;
+      height: 352px;
       position: absolute;
       background: url("../../img/2005.png") no-repeat;
       background-size: contain;
-      left: 0;
-      top: 5px;
+      top: 8px;
+      left: 2px;
     }
   }
 
   .company__about h2 {
     font-size: 32px;
-    margin-block-end: 20px;
+    margin-block-end: 26px;
   }
 
   .company__about p {
@@ -90,21 +90,21 @@
   }
 
   .company__about-button {
-    margin-left: 183px;
+    margin-left: 187px;
   }
 }
 
 @media (max-width: $mobile) {
   .company {
     @include inner(767px, 15px);
-    padding-top: 10px;
-    padding-bottom: 65px;
+    padding-top: 17px;
+    padding-bottom: 75px;
   }
 
   .company__about {
     padding-left: 0;
     position: relative;
-    margin-bottom: 45px;
+    margin-bottom: 40px;
 
     &::before {
       content: "";
@@ -114,10 +114,11 @@
 
   .company__about h2 {
     font-size: 28px;
+    margin-block-end: 21px;
   }
 
   .company__about p {
-    margin-block-end: 45px;
+    margin-block-end: 39px;
   }
 
   .company__about-button {

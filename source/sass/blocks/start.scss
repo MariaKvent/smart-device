@@ -80,29 +80,29 @@
 @media (max-width: $tablet) {
   .start {
     @include inner(1023px, 25px);
-    padding-top: 106px;
+    padding-top: 108px;
     padding-bottom: 163px;
   }
 
   .start__text {
     width: 60%;
-    padding-left: 63px;
+    padding-left: 66px;
   }
 
   .start__text h1 {
     @include fonts(700, 60px, 70px);
-    margin-bottom: 32px;
+    margin-bottom: 29px;
   }
 
   .start__text p {
     font-size: 18px;
     padding-left: 48px;
     // max-width: 613px;
-    margin-bottom: 60px;
+    margin-bottom: 55px;
 
     &::before {
       width: 33px;
-      top: 14px;
+      top: 15px;
     }
   }
 
@@ -127,7 +127,7 @@
 @media (max-width: $mobile) {
   .start {
     @include inner(767px, 15px);
-    padding-top: 214px;
+    padding-top: 205px;
     padding-bottom: 70px;
   }
 
@@ -138,17 +138,18 @@
 
   .start__text h1 {
     @include fonts(700, 40px, 47px);
-    margin-bottom: 32px;
+    margin-bottom: 28px;
     max-width: 220px;
   }
 
   .start__text p {
     font-size: 16px;
-    padding-left: 48px;
+    padding-left: 50px;
     max-width: 245px;
     margin-bottom: 42px;
 
     &::before {
+      left: 2px;
       top: 13px;
     }
   }
