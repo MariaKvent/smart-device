@@ -53,6 +53,7 @@
   padding: 14px 16px;
   margin-bottom: 40px;
   margin-right: 25px;
+  color: $white;
 
   &:nth-child(2n) {
     margin-right: 0;
@@ -73,9 +74,9 @@
   opacity: 0.9;
   padding: 14px 16px;
   width: 93.5%;
-  height: 154px;
+  height: 134px;
   resize: none;
-  margin-bottom: 9px;
+  margin-bottom: 29px;
 }
 
 .form__textarea::placeholder {

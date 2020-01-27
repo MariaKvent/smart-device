@@ -148,7 +148,7 @@
             <form class="form question__form" action="http://echo.htmlacademy.ru" method="post">
               <div class="form__inputs">
                 <input class="form__input" id="form-name" type="text" name="name" placeholder="Имя" required>
-                <input class="form__input" id="form-tel" type="tel" name="tel" placeholder="Телефон" required>
+                <input class="form__input" id="form-tel" type="tel" name="tel" placeholder="Телефон" minlength="17" maxlength="17" required>
               </div>
               <textarea class="form__textarea" id="form-text" name="text" placeholder="Ваш вопрос"></textarea>
               <div class="form__button-wrapper">
@@ -198,9 +198,9 @@
             </a>
           </div>
         </div>
-        <div class="footer__about-site">
+        <div class="footer__about-site accordeon">
           <p>Разделы сайта</p>
-          <div class="footer__items">
+          <div class="footer__items acc__items">
             <ul>
               <li><a>О компании</a></li>
               <li><a>Продукты</a></li>
@@ -214,9 +214,9 @@
             </ul>
           </div>
         </div>
-        <div class="footer__about-contacts">
+        <div class="footer__about-contacts accordeon">
           <p>Наш офис</p>
-          <div class="footer__contact">
+          <div class="footer__contact acc__items">
             <p>г. Мытищи, Олимпийский проспект, д.10</p>
             <p>+7 (495) 589-40-50</p>
             <p>+7 (925) 003-87-67</p>
@@ -224,7 +224,7 @@
           </div>
         </div>
       </div>
-      <hr>
+      <hr class="line">
       <div class="footer__copyright">
         <div class="copyright-container">
           <p>Все права защищены</p>
