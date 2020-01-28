@@ -5,7 +5,7 @@
   src: local("Roboto Medium"),
     local("Roboto-Medium"),
     // url("../fonts/robotomedium.woff2") format("woff2"),
-    url("../fonts/robotomedium.woff") format("woff");
+    url("../fonts/robotomedium.woff2") format("woff2");
 }
 
 @font-face {
@@ -15,7 +15,7 @@
   src: local("Roboto Condensed"),
     local("RobotoCondensed"),
     // url("../fonts/robotocondensedregular.woff2") format("woff2"),
-    url("../fonts/robotocondensedregular.woff") format("woff");
+    url("../fonts/robotocondensedregular.woff2") format("woff2");
 }
 
 @font-face {
@@ -25,7 +25,7 @@
   src: local("Roboto Condensed Bold"),
     local("RobotoCondensed-bold"),
     // url("../fonts/robotocondensedbold.woff2") format("woff2"),
-    url("../fonts/robotocondensedbold.woff") format("woff");
+    url("../fonts/robotocondensedbold.woff2") format("woff2");
 }
 
 @font-face {
@@ -35,5 +35,5 @@
   src: local("PT Mono"),
     local("PT-Mono"),
     // url("../fonts/ptmonoregular.woff2") format("woff2"),
-    url("../fonts/ptmonoregular.woff") format("woff");
+    url("../fonts/ptmonoregular.woff2") format("woff2");
 }

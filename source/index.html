@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Сайт компании Smart Device">
     <title>Smart Device</title>
     <link rel="stylesheet" href="css/style.min.css">
-    <!-- шрифты woff будут заменены на woff2-->
-    <link rel="preload" href="fonts/robotomedium.woff" as="font" crossorigin="anonymous">
-    <link rel="preload" href="fonts/robotocondensedregular.woff" as="font" crossorigin="anonymous">
-    <link rel="preload" href="fonts/robotocondensedbold.woff" as="font" crossorigin="anonymous">
-    <link rel="preload" href="fonts/ptmonoregular.woff" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/robotomedium.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/robotocondensedregular.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/robotocondensedbold.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/ptmonoregular.woff2" as="font" crossorigin="anonymous">
   </head>
   <body class="page-body">
     <div class="pic-container">
@@ -24,13 +24,12 @@
             <span class="page-header__logo-text-small">Умные технологии</span>
           </div>
         </a>
-        <div class="page-header__burger">
-          Бургер?
+        <div class="page-header__burger"> 
         </div>
         <nav class="main-nav">
           <a class="main-nav__email" href="mailto:info@sd.ru">info@sd.ru</a>
           <a class="main-nav__phone" href="tel:+74950005252">+7 (495) 000 52 52</a>
-          <a class="main-nav__button button modal__toggle">Заказать звонок</a>
+          <a class="main-nav__button button button__toggle">Заказать звонок</a>
         </nav>
       </header>
       <section class="start">
@@ -147,15 +146,15 @@
             <p>Мы проконсультируем Вас бесплатно</p>
             <form class="form question__form" action="http://echo.htmlacademy.ru" method="post">
               <div class="form__inputs">
-                <input class="form__input" id="form-name" type="text" name="name" placeholder="Имя" required>
-                <input class="form__input" id="form-tel" type="tel" name="tel" placeholder="Телефон" minlength="17" maxlength="17" required>
+                <input class="form__input" id="form-name" type="text" name="name" placeholder="Имя" aria-label="Имя" required>
+                <input class="form__input" id="form-tel" type="tel" name="tel" placeholder="Телефон" aria-label="Телефон" required>
               </div>
-              <textarea class="form__textarea" id="form-text" name="text" placeholder="Ваш вопрос"></textarea>
+              <textarea class="form__textarea" id="form-text" name="text" placeholder="Ваш вопрос" aria-label="Ваш вопрос"></textarea>
               <div class="form__button-wrapper">
-                <button class="form__button button" type="submit" name="button">Задать вопрос</button>
+                <button class="form__button button" type="submit" name="button" aria-label="Закрыть">Задать вопрос</button>
                 <div class="form__checkbox">
                   <label class="form__checkbox_label">Я согласен на обработку персональных данных
-                    <input class="form__checkbox_input" type="checkbox" name="agree" checked>
+                    <input class="form__checkbox_input" type="checkbox" name="agree" aria-label="Согласен" checked>
                   </label>
                 </div>
               </div>
@@ -200,7 +199,7 @@
         </div>
         <div class="footer__about-site accordeon">
           <p>Разделы сайта</p>
-          <div class="footer__items acc__items">
+          <div class="footer__items accordeon__items">
             <ul>
               <li><a>О компании</a></li>
               <li><a>Продукты</a></li>
@@ -216,7 +215,7 @@
         </div>
         <div class="footer__about-contacts accordeon">
           <p>Наш офис</p>
-          <div class="footer__contact acc__items">
+          <div class="footer__contact accordeon__items">
             <p>г. Мытищи, Олимпийский проспект, д.10</p>
             <p>+7 (495) 589-40-50</p>
             <p>+7 (925) 003-87-67</p>
@@ -240,15 +239,15 @@
           <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
           <form class="modal__form" action="http://echo.htmlacademy.ru" method="post">
             <div class="modal__inputs">
-              <input class="modal__input" id="modal-name" type="text" name="modal-name" placeholder="Имя" required>
-              <input class="modal__input" id="modal-tel" type="tel" name="modal-tel" placeholder="Телефон" pattern="[0-9]" max="10" required>
+              <input class="modal__input" id="modal-name" type="text" name="modal-name" placeholder="Имя" aria-label="Имя" required>
+              <input class="modal__input" id="modal-tel" type="tel" name="modal-tel" placeholder="Телефон" aria-label="Телефон" required>
             </div>
-            <textarea class="modal__textarea" id="modal-text" name="modal-text" placeholder="Ваш вопрос"></textarea>
+            <textarea class="modal__textarea" id="modal-text" name="modal-text" placeholder="Ваш вопрос" aria-label="Ваш вопрос"></textarea>
             <div class="modal__button-wrapper">
               <button class="modal__button button" type="submit" name="modal-button">Отправить</button>
               <div class="modal__checkbox">
                 <label class="modal__checkbox_label">Я согласен на обработку персональных данных
-                    <input class="modal__checkbox_input" type="checkbox" name="modal-agree" checked>
+                    <input class="modal__checkbox_input" type="checkbox" name="modal-agree" aria-label="Согласен" checked>
                 </label>
               </div>
             </div>
