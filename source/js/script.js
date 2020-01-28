@@ -98,17 +98,27 @@ window.onresize = function () {
 
 // аккордеон
 var acc = document.getElementsByClassName('accordeon');
-for (var k = 0; k < acc.length; k++) {
-  acc[k].addEventListener('click', function () {
-    this.classList.toggle('active');
-    var items = this.lastElementChild;
-    if (items.style.maxHeight) {
-      items.style.maxHeight = null;
-    } else {
-      items.style.maxHeight = items.scrollHeight + 'px';
-    }
-  });
-}
+acc[0].addEventListener('click', function () {
+  var accSite = document.getElementsByClassName('footer__about-site');
+  accSite[0].classList.toggle('active');
+  var items = accSite[0].lastElementChild;
+  if (items.style.maxHeight) {
+    items.style.maxHeight = null;
+  } else {
+    items.style.maxHeight = items.scrollHeight + 'px';
+  }
+});
+
+acc[1].addEventListener('click', function () {
+  var accContacts = document.getElementsByClassName('footer__about-contacts');
+  accContacts[0].classList.toggle('active');
+  var items = accContacts[0].lastElementChild;
+  if (items.style.maxHeight) {
+    items.style.maxHeight = null;
+  } else {
+    items.style.maxHeight = items.scrollHeight + 'px';
+  }
+});
 
 // плавный скролл до якоря
 var anchors = [].slice.call(document.querySelectorAll('a[href*="#"]'));
@@ -154,11 +164,12 @@ window.addEventListener('DOMContentLoaded', function () {
     var matrix = '+7(___)_______';
     var i = 0;
     var def = matrix.replace(/\D/g, '');
-    var val = this.value.replace(/\D/g, '');
+    var modalTel = document.getElementById('modal-tel');
+    var val = modalTel.value.replace(/\D/g, '');
     if (def.length >= val.length) {
       val = def;
     }
-    this.value = matrix.replace(/./g, function (a) {
+    modalTel.value = matrix.replace(/./g, function (a) {
       if (/[_\d]/.test(a) && i < (val.length + 1)) {
         return val.charAt(i++);
       } else {
@@ -170,14 +181,14 @@ window.addEventListener('DOMContentLoaded', function () {
       }
     });
     if (event.type === 'blur') {
-      if (this.value.length === 3) {
-        this.value = '';
+      if (modalTel.value.length === 3) {
+        modalTel.value = '';
       }
     } else {
-      if (this.value[this.value.length - 1] === ')') {
-        this.value = this.value.substring(0, this.value.length - 1);
+      if (modalTel.value[modalTel.value.length - 1] === ')') {
+        modalTel.value = modalTel.value.substring(0, modalTel.value.length - 1);
       }
-      setCursorPosition(this.value.length, this);
+      setCursorPosition(modalTel.value.length, modalTel);
     }
   }
   var input = document.querySelector('#modal-tel');
@@ -207,11 +218,12 @@ window.addEventListener('DOMContentLoaded', function () {
     var matrix = '+7(___)_______';
     var i = 0;
     var def = matrix.replace(/\D/g, '');
-    var val = this.value.replace(/\D/g, '');
+    var formTel = document.getElementById('form-tel');
+    var val = formTel.value.replace(/\D/g, '');
     if (def.length >= val.length) {
       val = def;
     }
-    this.value = matrix.replace(/./g, function (a) {
+    formTel.value = matrix.replace(/./g, function (a) {
       if (/[_\d]/.test(a) && i < (val.length + 1)) {
         return val.charAt(i++);
       } else {
@@ -223,14 +235,14 @@ window.addEventListener('DOMContentLoaded', function () {
       }
     });
     if (event.type === 'blur') {
-      if (this.value.length === 3) {
-        this.value = '';
+      if (formTel.value.length === 3) {
+        formTel.value = '';
       }
     } else {
-      if (this.value[this.value.length - 1] === ')') {
-        this.value = this.value.substring(0, this.value.length - 1);
+      if (formTel.value[formTel.value.length - 1] === ')') {
+        formTel.value = formTel.value.substring(0, formTel.value.length - 1);
       }
-      setCursorPosition(this.value.length, this);
+      setCursorPosition(formTel.value.length, formTel);
     }
   }
   var input = document.querySelector('#form-tel');

@@ -262,6 +262,10 @@
     display: block;
   }
 
+  .footer__items ul:last-child {
+    padding-bottom: 26px;
+  }
+
   .footer__about-contacts {
     width: 86%;
     padding-left: 15px;
