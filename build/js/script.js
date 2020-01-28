@@ -4,27 +4,38 @@ var modalToggle = document.querySelector('.button__toggle');
 var modalClosed = document.querySelector('.modal__closed');
 var pageBody = document.querySelector('.page-body');
 var focusOnName = document.getElementById('modal-name');
-var footerAbout = document.querySelector('.footer__about-main');
+var footerAboutMain = document.querySelector('.footer__about-main');
 
 var showModal = function () {
-  modalCall.classList.remove('modal_hide');
-  pageBody.classList.add('scroll-hidden');
-  focusOnName.focus();
+  if (modalCall) {
+    modalCall.classList.remove('modal_hide');
+  }
+  if (pageBody) {
+    pageBody.classList.add('scroll-hidden');
+  }
+  if (focusOnName) {
+    focusOnName.focus();
+  }
 };
 
 var closeModal = function () {
-  modalCall.classList.add('modal_hide');
-  pageBody.classList.remove('scroll-hidden');
+  if (modalCall) {
+    modalCall.classList.add('modal_hide');
+  }
+  if (pageBody) {
+    pageBody.classList.remove('scroll-hidden');
+  }
 };
-
-modalToggle.addEventListener('click', function () {
-  showModal();
-});
-
-modalClosed.addEventListener('click', function () {
-  closeModal();
-});
-
+if (modalToggle) {
+  modalToggle.addEventListener('click', function () {
+    showModal();
+  });
+}
+if (modalClosed) {
+  modalClosed.addEventListener('click', function () {
+    closeModal();
+  });
+}
 document.addEventListener('keydown', function (evt) {
   if (evt.keyCode === 27) {
     closeModal();
@@ -39,50 +50,67 @@ document.addEventListener('mouseup', function (e) {
 
 // создание измененного поля копирайт и линий в подвале
 var cloneCopy = function () {
-  if (window.screen.width < 767) {
-    if (footerAbout.querySelector('.clone__lines') === null) {
-      var clonedNode2 = document.createElement('hr');
-      clonedNode2.className = 'clone__lines';
-      clonedNode2.style.color = '#626962';
-      clonedNode2.style.height = '1px';
-      clonedNode2.style.width = '100%';
-      clonedNode2.style.margin = '0';
-      var acc2 = document.querySelector('.footer__about-contacts');
-      document.querySelector('.footer__about').insertBefore(clonedNode2, acc2);
+  if (footerAboutMain) {
+    if (window.screen.width < 767) {
+      if (footerAboutMain.querySelector('.clone__lines') === null) {
+        var clonedNode2 = document.createElement('hr');
+        clonedNode2.className = 'clone__lines';
+        clonedNode2.style.color = '#626962';
+        clonedNode2.style.height = '1px';
+        clonedNode2.style.width = '100%';
+        clonedNode2.style.margin = '0';
+        var acc2 = document.querySelector('.footer__about-contacts');
+
+        if (acc2) {
+          var footerAbout = document.querySelector('.footer__about');
+          if (footerAbout) {
+            footerAbout.insertBefore(clonedNode2, acc2);
+          }
+        }
+      }
+
+      var startMobileButton = document.querySelector('.start__text-button');
+      if (startMobileButton) {
+        startMobileButton.innerHTML = 'Бесплатная консультация';
+      }
+    } else {
+      var startButton = document.querySelector('.start__text-button');
+      if (startButton) {
+        startButton.innerHTML = 'Получить бесплатную консультацию';
+      }
     }
+    if (window.screen.width < 1024) {
 
-    var startMobileButton = document.querySelector('.start__text-button');
-    startMobileButton.innerHTML = 'Бесплатная консультация';
-  } else {
-    var startButton = document.querySelector('.start__text-button');
-    startButton.innerHTML = 'Получить бесплатную консультацию';
-  }
-  if (window.screen.width < 1024) {
+      if (footerAboutMain.querySelector('.clone__lines') === null) {
+        var clonedNode = document.createElement('hr');
+        clonedNode.className = 'clone__lines';
+        clonedNode.style.color = '#626962';
+        clonedNode.style.height = '1px';
+        clonedNode.style.width = '100%';
+        clonedNode.style.margin = '0';
+        var acc = document.querySelector('.footer__about-site');
+        if (acc) {
+          var footerAbout = document.querySelector('.footer__about');
+          if (footerAbout) {
+            footerAbout.insertBefore(clonedNode, acc);
+          }
+        }
+      }
 
-    if (footerAbout.querySelector('.clone__lines') === null) {
-      var clonedNode = document.createElement('hr');
-      clonedNode.className = 'clone__lines';
-      clonedNode.style.color = '#626962';
-      clonedNode.style.height = '1px';
-      clonedNode.style.width = '100%';
-      clonedNode.style.margin = '0';
-      var acc = document.querySelector('.footer__about-site');
-      document.querySelector('.footer__about').insertBefore(clonedNode, acc);
-    }
-
-    if (footerAbout.querySelector('.clone__copyright') === null) {
-      var div = document.createElement('div');
-      div.innerHTML = '1999-2018 SD Service Devices';
-      div.className = 'clone__copyright';
-      div.style.color = '#666666';
-      div.style.opacity = '0.5';
-      div.style.textTransform = 'uppercase';
-      div.style.fontSize = '13px';
-      div.style.lineHeight = '24px';
-      div.style.letterSpacing = '0.04em';
-      div.style.paddingTop = '15px';
-      div.style.order = '2';
-      footerAbout.appendChild(div);
+      if (footerAboutMain.querySelector('.clone__copyright') === null) {
+        var div = document.createElement('div');
+        div.innerHTML = '1999-2018 SD Service Devices';
+        div.className = 'clone__copyright';
+        div.style.color = '#666666';
+        div.style.opacity = '0.5';
+        div.style.textTransform = 'uppercase';
+        div.style.fontSize = '13px';
+        div.style.lineHeight = '24px';
+        div.style.letterSpacing = '0.04em';
+        div.style.paddingTop = '15px';
+        div.style.order = '2';
+        footerAboutMain.appendChild(div);
+      }
     }
   }
 };
@@ -91,40 +119,38 @@ cloneCopy();
 
 window.onresize = function () {
   var elements = document.getElementsByClassName('clone__copyright');
-  while (elements.length > 0) {
-    elements[0].parentNode.removeChild(elements[0]);
+  if (elements) {
+    while (elements.length > 0) {
+      elements[0].parentNode.removeChild(elements[0]);
+    }
   }
 
   var elements2 = document.getElementsByClassName('clone__lines');
-  while (elements2.length > 0) {
-    elements2[0].parentNode.removeChild(elements2[0]);
+  if (elements2) {
+    while (elements2.length > 0) {
+      elements2[0].parentNode.removeChild(elements2[0]);
+    }
   }
   cloneCopy();
 };
 
 // аккордеон
 var acc = document.getElementsByClassName('accordeon');
-acc[0].addEventListener('click', function () {
-  var accSite = document.getElementsByClassName('footer__about-site');
-  accSite[0].classList.toggle('active');
-  var items = accSite[0].lastElementChild;
-  if (items.style.maxHeight) {
-    items.style.maxHeight = null;
-  } else {
-    items.style.maxHeight = items.scrollHeight + 'px';
+if (acc) {
+  for (var j = 0; j < acc.length; j++)
+  {
+    acc[j].addEventListener('click', function (event) {
+      var accSite = event.currentTarget;
+      accSite.classList.toggle('active');
+      var items = accSite.lastElementChild;
+      if (items.style.maxHeight) {
+        items.style.maxHeight = null;
+      } else {
+        items.style.maxHeight = items.scrollHeight + 'px';
+      }
+    });
   }
-});
-
-acc[1].addEventListener('click', function () {
-  var accContacts = document.getElementsByClassName('footer__about-contacts');
-  accContacts[0].classList.toggle('active');
-  var items = accContacts[0].lastElementChild;
-  if (items.style.maxHeight) {
-    items.style.maxHeight = null;
-  } else {
-    items.style.maxHeight = items.scrollHeight + 'px';
-  }
-});
+}
 
 // плавный скролл до якоря
 var anchors = [].slice.call(document.querySelectorAll('a[href*="#"]'));
@@ -153,7 +179,6 @@ anchors.forEach(function (item) {
 // маска и валидация номера телефона в попапе
 window.addEventListener('DOMContentLoaded', function () {
   function setCursorPosition(pos, inpModal) {
-    inpModal = document.getElementById('modal-tel');
     inpModal.focus();
     if (inpModal.setSelectionRange) {
       inpModal.setSelectionRange(pos, pos);
@@ -170,7 +195,7 @@ window.addEventListener('DOMContentLoaded', function () {
     var matrix = '+7(___)_______';
     var i = 0;
     var def = matrix.replace(/\D/g, '');
-    var modalTel = document.getElementById('modal-tel');
+    var modalTel = event.currentTarget;
     var val = modalTel.value.replace(/\D/g, '');
     if (def.length >= val.length) {
       val = def;
@@ -197,64 +222,21 @@ window.addEventListener('DOMContentLoaded', function () {
       setCursorPosition(modalTel.value.length, modalTel);
     }
   }
+  function setCallBacks(element) {
+    element.addEventListener('input', mask, false);
+    element.addEventListener('focus', mask, false);
+    element.addEventListener('blur', mask, false);
+  }
+
   var input = document.querySelector('#modal-tel');
-  input.addEventListener('input', mask, false);
-  input.addEventListener('focus', mask, false);
-  input.addEventListener('blur', mask, false);
-});
-
-// маска и валидация номера телефона в форме
-
-window.addEventListener('DOMContentLoaded', function () {
-  function setCursorPosition(pos, inp) {
-    inp = document.getElementById('form-tel');
-    inp.focus();
-    if (inp.setSelectionRange) {
-      inp.setSelectionRange(pos, pos);
-    } else if (inp.createTextRange) {
-      var range = inp.createTextRange();
-      range.collapse(true);
-      range.moveEnd('character', pos);
-      range.moveStart('character', pos);
-      range.select();
-    }
+  if (input) {
+    setCallBacks(input);
   }
 
-  function mask(event) {
-    var matrix = '+7(___)_______';
-    var i = 0;
-    var def = matrix.replace(/\D/g, '');
-    var formTel = document.getElementById('form-tel');
-    var val = formTel.value.replace(/\D/g, '');
-    if (def.length >= val.length) {
-      val = def;
-    }
-    formTel.value = matrix.replace(/./g, function (a) {
-      if (/[_\d]/.test(a) && i < (val.length + 1)) {
-        return val.charAt(i++);
-      } else {
-        if (i >= (val.length + 1)) {
-          return '';
-        } else {
-          return a;
-        }
-      }
-    });
-    if (event.type === 'blur') {
-      if (formTel.value.length === 3) {
-        formTel.value = '';
-      }
-    } else {
-      if (formTel.value[formTel.value.length - 1] === ')') {
-        formTel.value = formTel.value.substring(0, formTel.value.length - 1);
-      }
-      setCursorPosition(formTel.value.length, formTel);
-    }
+  var input2 = document.querySelector('#form-tel');
+  if (input2) {
+    setCallBacks(input2);
   }
-  var input = document.querySelector('#form-tel');
-  input.addEventListener('input', mask, false);
-  input.addEventListener('focus', mask, false);
-  input.addEventListener('blur', mask, false);
 });
 
 // запись в Local Storage
@@ -262,13 +244,15 @@ var elements = document.querySelectorAll('input, textarea');
 
 function checkValidity() {}
 
-for (var i = 0; i < elements.length; i++) {
-  (function (element) {
-    var id = element.getAttribute('id');
-    element.value = localStorage.getItem(id);
-    element.oninput = function () {
-      localStorage.setItem(id, element.value);
-      checkValidity();
-    };
-  })(elements[i]);
+if (elements) {
+  for (var i = 0; i < elements.length; i++) {
+    (function (element) {
+      var id = element.getAttribute('id');
+      element.value = localStorage.getItem(id);
+      element.oninput = function () {
+        localStorage.setItem(id, element.value);
+        checkValidity();
+      };
+    })(elements[i]);
+  }
 }
