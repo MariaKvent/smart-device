@@ -50,6 +50,12 @@ var cloneCopy = function () {
       var acc2 = document.querySelector('.footer__about-contacts');
       document.querySelector('.footer__about').insertBefore(clonedNode2, acc2);
     }
+
+    var startMobileButton = document.querySelector('.start__text-button');
+    startMobileButton.innerHTML = 'Бесплатная консультация';
+  } else {
+    var startButton = document.querySelector('.start__text-button');
+    startButton.innerHTML = 'Получить бесплатную консультацию';
   }
   if (window.screen.width < 1024) {
 

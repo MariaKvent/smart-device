@@ -13,7 +13,8 @@
   @include fonts(400, 36px, 140.6%);
   color: $white;
   margin-block-start: 0;
-  margin-block-end: 50px;
+  margin-block-end: 51px;
+  padding-left: 2px;
 }
 
 .goods__items {
@@ -27,7 +28,7 @@
   color: $white;
   margin-block-start: 0;
   margin-block-end: 0;
-  padding-left: 47px;
+  padding-left: 48px;
   width: 160px;
   padding-bottom: 20px;
 }
@@ -35,7 +36,7 @@
 .goods__item {
   @include link($white);
   min-width: 370px;
-  min-height: 550px;
+  min-height: 548px;
   position: relative;
   padding-top: 53px;
   padding-bottom: 20px;

@@ -42,7 +42,7 @@
   margin-block-end: 33px;
 }
 
-.modal__input {
+.modal__inputs input {
   font-family: "PT Mono", "Arial", sans-serif;
   font-size: 16px;
   line-height: 134.4%;
@@ -55,7 +55,7 @@
   color: $white;
 }
 
-.modal__input::placeholder {
+.modal__inputs input::placeholder {
   color: $white;
 }
 
@@ -110,7 +110,7 @@
   opacity: 0.8;
 }
 
-.modal__checkbox_input {
+.modal__checkbox input {
   visibility: hidden;
   position: relative;
   width: 0;

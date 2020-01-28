@@ -82,7 +82,7 @@
     line-height: 22px;
     color: $dark-gray;
     margin-block-start: 0;
-    margin-block-end: 20px;
+    margin-block-end: 21px;
   }
 
   .company__about span {
@@ -97,14 +97,14 @@
 @media (max-width: $mobile) {
   .company {
     @include inner(767px, 15px);
-    padding-top: 17px;
+    padding-top: 13px;
     padding-bottom: 75px;
   }
 
   .company__about {
     padding-left: 0;
     position: relative;
-    margin-bottom: 40px;
+    margin-bottom: 39px;
 
     &::before {
       content: "";

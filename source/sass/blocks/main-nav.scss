@@ -10,6 +10,7 @@
   font-size: 16px;
   line-height: 18px;
   color: $white;
+  padding-left: 36px;
 
   &::before {
     content: "";
@@ -19,7 +20,7 @@
     position: absolute;
     background: url("../../img/env.png") no-repeat;
     background-size: cover;
-    left: -36px;
+    left: 0;
     top: 2px;
   }
 }
@@ -30,7 +31,8 @@
   font-size: 16px;
   line-height: 18px;
   color: $white;
-  margin-left: 127px;
+  padding-left: 35px;
+  margin-left: 90px;
 
   &::before {
     content: "";
@@ -40,7 +42,7 @@
     position: absolute;
     background: url("../../img/phone.png") no-repeat;
     background-size: 100%;
-    left: -35px;
+    left: 0;
   }
 }
 
@@ -55,6 +57,10 @@
 }
 
 @media (max-width: $tablet) {
+  .main-nav {
+    padding-left: 0;
+  }
+
   .main-nav__button {
     display: none;
   }
@@ -66,15 +72,15 @@
       @include link($white);
       width: 25px;
       height: 19px;
-      top: -7px;
-      left: -40px;
+      top: -2px;
+      left: 30px;
     }
   }
 
   .main-nav__phone {
     font-size: 0;
     left: 10px;
-    top: -10px;
+    top: -5px;
     margin-left: 43px;
 
     &::before {
@@ -93,8 +99,13 @@
       @include link($white);
       width: 25px;
       height: 19px;
-      top: -7px;
-      left: -30px;
+      top: -3px;
+      left: 40px;
     }
+  }
+
+  .main-nav__phone::before {
+    width: 23px;
+    height: 23px;
   }
 }
