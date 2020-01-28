@@ -1,6 +1,8 @@
 .goods {
   padding-top: 89px;
   padding-bottom: 117px;
+  padding-left: 10px;
+  padding-right: 10px;
   background-color: $gray-black;
 }
 
@@ -35,12 +37,12 @@
 
 .goods__item {
   @include link($white);
-  min-width: 370px;
+  min-width: 31.5%;
   min-height: 548px;
   position: relative;
   padding-top: 53px;
   padding-bottom: 20px;
-  margin-left: 30px;
+  margin-left: 2.6%;
   margin-bottom: 10px;
 
   &:first-child {
@@ -49,16 +51,19 @@
 
   &_produce {
     background: url("../../img/pic-1.png") no-repeat;
+    background-color: #1C3340;
     background-size: cover;
   }
 
   &_install {
     background: url("../../img/pic-2.png") no-repeat;
+    background-color: #1C3340;
     background-size: cover;
   }
 
   &_parts {
     background: url("../../img/pic-3.png") no-repeat;
+    background-color: #1C3340;
     background-size: cover;
   }
 
@@ -78,6 +83,7 @@
 @media (max-width: $tablet) {
   .goods {
     @include inner(1023px, 25px);
+    margin: 0;
     padding-top: 50px;
     padding-bottom: 78px;
   }
@@ -139,6 +145,7 @@
 @media (max-width: $mobile) {
   .goods {
     @include inner(767px, 15px);
+    margin: 0;
     padding-top: 50px;
     padding-bottom: 66px;
   }

@@ -59,7 +59,7 @@
   color: $white;
 }
 
-.modal__textarea {
+.modal__form textarea {
   font-family: "PT Mono", "Arial", sans-serif;
   font-size: 16px;
   line-height: 134.4%;
@@ -74,7 +74,7 @@
   margin-bottom: 20px;
 }
 
-.modal__textarea::placeholder {
+.modal__form textarea::placeholder {
   color: $white;
 }
 
@@ -108,6 +108,7 @@
   line-height: 15px;
   color: $white;
   opacity: 0.8;
+  cursor: pointer;
 }
 
 .modal__checkbox input {
