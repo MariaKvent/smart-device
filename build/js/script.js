@@ -90,9 +90,9 @@ var cloneCopy = function () {
         clonedNode.style.margin = '0';
         var acc = document.querySelector('.footer__about-site');
         if (acc) {
-          var footerAbout = document.querySelector('.footer__about');
-          if (footerAbout) {
-            footerAbout.insertBefore(clonedNode, acc);
+          var footerAboutDesk = document.querySelector('.footer__about');
+          if (footerAboutDesk) {
+            footerAboutDesk.insertBefore(clonedNode, acc);
           }
         }
       }
@@ -137,8 +137,7 @@ window.onresize = function () {
 // аккордеон
 var acc = document.getElementsByClassName('accordeon');
 if (acc) {
-  for (var j = 0; j < acc.length; j++)
-  {
+  for (var j = 0; j < acc.length; j++) {
     acc[j].addEventListener('click', function (event) {
       var accSite = event.currentTarget;
       accSite.classList.toggle('active');

@@ -49,13 +49,14 @@
   text-transform: lowercase;
 }
 
-.footer__social a {
-  @include link($white);
+.footer__social {
+  display: flex;
+  justify-content: space-between;
+  width: 112px;
 }
 
-.footer__social_fb,
-.footer__social_ok {
-  padding-right: 8px;
+.footer__social a {
+  @include link($white);
 }
 
 .footer__about-site {
@@ -108,6 +109,18 @@
   font-size: 15px;
   line-height: 25px;
   color: $gray-black;
+  opacity: 0.5;
+  letter-spacing: normal;
+  text-transform: none;
+}
+
+.footer__contact-phone {
+  @include link($gray-black);
+  display: block;
+  margin: 0;
+  font-family: "PT Mono", "Arial", sans-serif;
+  font-size: 15px;
+  line-height: 25px;
   opacity: 0.5;
   letter-spacing: normal;
   text-transform: none;
@@ -294,6 +307,10 @@
   }
 
   .footer__contact p {
+    margin-bottom: 0;
+  }
+
+  .footer__contact-phone {
     margin-bottom: 0;
 
     &:last-child {
