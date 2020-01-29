@@ -108,52 +108,63 @@
   line-height: 15px;
   margin-left: 4px;
   cursor: pointer;
+  display: flex;
+  justify-content: space-between;
 }
 
 .form__checkbox_label {
-  display: flex;
-  justify-content: space-between;
+  position: relative;
   font-size: 14px;
   line-height: 15px;
   color: $white;
   opacity: 0.8;
   cursor: pointer;
-}
-
-.form__checkbox input {
-  visibility: hidden;
-  position: relative;
-  width: 15px;
-  height: 15px;
-  padding-right: 20px;
-  cursor: pointer;
+  margin-left: 6px;
+  padding-left: 13px;
 
   &::before {
-    visibility: visible;
     position: absolute;
+    display: inline-block;
     content: "";
     width: 15px;
     height: 15px;
     background-color: transparent;
     border: 1px solid #e5e5e5;
-    top: -3px;
+    top: 0;
     left: -20px;
     cursor: pointer;
   }
 
-  &:checked {
-    &::after {
-      visibility: visible;
-      position: absolute;
-      content: "";
-      width: 8px;
-      height: 5px;
-      top: 2px;
-      left: -16px;
-      background: url("../../img/check.png") no-repeat 0 0;
-      cursor: pointer;
-    }
+  &::after {
+    position: absolute;
+    display: inline-block;
+    content: "";
+    width: 8px;
+    height: 5px;
+    top: 5px;
+    left: -16px;
+    background: url("../../img/check.png") no-repeat 0 0;
+    cursor: pointer;
   }
+}
+
+.form__checkbox input + label::after {
+  content: none;
+}
+
+.form__checkbox input:checked + label::after {
+  content: "";
+}
+
+.form__checkbox input:focus + label::before {
+  outline: 2px solid $white;
+}
+
+.form__checkbox input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  margin: 0;
 }
 
 @media (max-width: $tablet) {
@@ -304,46 +315,12 @@
   }
 
   .form__checkbox {
-    margin-left: 2px;
+    margin-left: 0;
   }
 
   .form__checkbox_label {
     position: relative;
-    left: -10px;
     max-width: 240px;
-    text-align: left;
-  }
-
-  .form__checkbox input {
-    width: 10px;
-    height: 10px;
-
-
-    &::before {
-      visibility: visible;
-      position: absolute;
-      content: "";
-      width: 15px;
-      height: 15px;
-      background-color: transparent;
-      border: 1px solid #e5e5e5;
-      top: -3px;
-      left: -22px;
-      cursor: pointer;
-    }
-
-    &:checked {
-      &::after {
-        visibility: visible;
-        position: absolute;
-        content: "";
-        width: 8px;
-        height: 5px;
-        top: 2px;
-        left: -17px;
-        background: url("../../img/check.png") no-repeat 0 0;
-        cursor: pointer;
-      }
-    }
+    margin-left: 0;
   }
 }
