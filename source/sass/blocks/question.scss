@@ -3,8 +3,8 @@
   padding-right: 10px;
   padding-top: 92px;
   padding-bottom: 109px;
-  background: url("../../img/bg-form.jpg") no-repeat;
   background-color: $blue;
+  background: url("../../img/bg-form.jpg") no-repeat;
   background-size: cover;
 }
 
@@ -54,6 +54,7 @@
   padding: 14px 16px;
   margin-bottom: 40px;
   margin-right: 25px;
+  border-radius: 0;
   color: $white;
 
   &:nth-child(2n) {
@@ -77,6 +78,7 @@
   width: 93.5%;
   height: 134px;
   resize: none;
+  border-radius: 0;
   margin-bottom: 29px;
 }
 

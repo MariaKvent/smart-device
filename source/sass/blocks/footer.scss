@@ -51,16 +51,18 @@
 
 .footer__social {
   display: flex;
-  justify-content: space-between;
-  width: 112px;
+  // justify-content: space-between;
+  flex-wrap: wrap;
+  width: 216px;
 }
 
 .footer__social a {
   @include link($white);
+  margin-right: 15px;
 }
 
 .footer__about-site {
-  margin-right: 20px;
+  margin-right: 10px;
 }
 
 .footer__about-site p,
@@ -77,10 +79,14 @@
 .footer__items {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .footer__items ul {
   list-style: none;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
   padding-inline-start: 0;
   margin-block-start: 0;
   margin-block-end: 0;
@@ -218,6 +224,9 @@
   }
 
   .footer__items ul {
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
     &:not(:first-child) {
       padding-left: 0;
     }

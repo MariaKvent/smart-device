@@ -21,7 +21,6 @@
 
 .goods__items {
   display: flex;
-  justify-content: space-around;
   flex-wrap: wrap;
 }
 
@@ -42,28 +41,28 @@
   position: relative;
   padding-top: 53px;
   padding-bottom: 20px;
-  margin-left: 2.6%;
+  margin-right: 2.6%;
   margin-bottom: 10px;
 
-  &:first-child {
-    margin-left: 0;
+  &:nth-child(3n) {
+    margin-right: 0;
   }
 
   &_produce {
-    background: url("../../img/pic-1.png") no-repeat;
     background-color: #1c3340;
+    background: url("../../img/pic-1.png") no-repeat;
     background-size: cover;
   }
 
   &_install {
-    background: url("../../img/pic-2.png") no-repeat;
     background-color: #1c3340;
+    background: url("../../img/pic-2.png") no-repeat;
     background-size: cover;
   }
 
   &_parts {
-    background: url("../../img/pic-3.png") no-repeat;
     background-color: #1c3340;
+    background: url("../../img/pic-3.png") no-repeat;
     background-size: cover;
   }
 

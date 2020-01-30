@@ -33,17 +33,17 @@ hr {
 
 .pic-container {
   flex: 0 0 auto;
+  background-color: $gray-black;
   background: url("../../img/bg-main.jpg") no-repeat center;
   background-size: cover;
   width: 100%;
-  background-color: $gray-black;
 }
 
 .main-pic-container {
+  background-color: $white;
   background: $white url("../../img/bg-white.png") repeat;
   background-size: cover;
   width: 100%;
-  background-color: $white;
 }
 
 .button {
@@ -55,18 +55,18 @@ hr {
 
 @media (max-width: $tablet) {
   .pic-container {
+    background-color: $gray-black;
     background: url("../../img/bg-main-tablet.jpg") no-repeat center;
     background-size: cover;
     min-height: 520px;
-    background-color: $gray-black;
   }
 }
 
 @media (max-width: $mobile) {
   .pic-container {
+    background-color: $gray-black;
     background: url("../../img/bg-main-mobile.jpg") no-repeat center;
     background-size: cover;
     min-height: 647px;
-    background-color: $gray-black;
   }
 }

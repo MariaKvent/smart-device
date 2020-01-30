@@ -52,6 +52,7 @@
   opacity: 0.9;
   padding: 16px 24px;
   margin-bottom: 29px;
+  border-radius: 0;
   color: $white;
 }
 
@@ -71,6 +72,7 @@
   width: 363px;
   height: 77px;
   resize: none;
+  border-radius: 0;
   margin-bottom: 20px;
 }
 
@@ -183,4 +185,45 @@
   &::after {
     transform: rotate(-45deg);
   }
+}
+
+@media (max-width: $mobile) {
+  .modal__wrapper {
+    position: relative;
+    opacity: 1;
+    width: 290px;
+    min-height: 543px;
+    padding: 20px 10px;
+    background: $blue;
+    z-index: 4;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .modal__wrapper p {
+    width: 290px;
+  }
+
+.modal__inputs input {
+  width: 258px;
+  padding: 14px 17px;
+}
+
+.modal__form textarea {
+  width: 258px;
+  padding: 14px 17px;
+}
+
+.modal__button-wrapper {
+
+}
+
+.modal__button {
+  width: 290px;
+  padding: 14px 82px;
+  margin-bottom: 31px;
+  font-size: 14px;
+}
+
 }
