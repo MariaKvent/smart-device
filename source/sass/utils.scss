@@ -33,16 +33,16 @@ hr {
 
 .pic-container {
   flex: 0 0 auto;
-  background-color: $gray-black;
-  background: url("../../img/bg-main.jpg") no-repeat center;
+  background: url("../img/bg-main.jpg") no-repeat center;
   background-size: cover;
+  background-color: $gray-black;
   width: 100%;
 }
 
 .main-pic-container {
-  background-color: $white;
-  background: $white url("../../img/bg-white.png") repeat;
+  background: $white url("../img/bg-white.png") repeat;
   background-size: cover;
+  background-color: $white;
   width: 100%;
 }
 
@@ -55,18 +55,18 @@ hr {
 
 @media (max-width: $tablet) {
   .pic-container {
-    background-color: $gray-black;
-    background: url("../../img/bg-main-tablet.jpg") no-repeat center;
+    background: url("../img/bg-main-tablet.jpg") no-repeat center;
     background-size: cover;
+    background-color: $gray-black;
     min-height: 520px;
   }
 }
 
 @media (max-width: $mobile) {
   .pic-container {
-    background-color: $gray-black;
-    background: url("../../img/bg-main-mobile.jpg") no-repeat center;
+    background: url("../img/bg-main-mobile.jpg") no-repeat center;
     background-size: cover;
+    background-color: $gray-black;
     min-height: 647px;
   }
 }

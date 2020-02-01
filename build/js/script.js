@@ -140,20 +140,18 @@ if (acc) {
   for (var j = 0; j < acc.length; j++) {
     acc[j].addEventListener('click', function (event) {
 
-      var acc = document.getElementsByClassName('accordeon');
+      // var acc = document.getElementsByClassName('accordeon');
       if (acc) {
         for (var h = 0; h < acc.length; h++) {
           var items = acc[h].lastElementChild;
-          if (acc[h] === event.currentTarget)
-          {
+          if (acc[h] === event.currentTarget) {
             acc[h].classList.toggle('active');
             if (items.style.maxHeight) {
               items.style.maxHeight = null;
             } else {
               items.style.maxHeight = items.scrollHeight + 'px';
             }
-          }
-          else {
+          } else {
             acc[h].classList.remove('active');
             items.style.maxHeight = null;
           }

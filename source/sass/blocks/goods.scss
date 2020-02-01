@@ -44,25 +44,29 @@
   margin-right: 2.6%;
   margin-bottom: 10px;
 
+
   &:nth-child(3n) {
     margin-right: 0;
   }
 
   &_produce {
     background-color: #1c3340;
-    background: url("../../img/pic-1.png") no-repeat;
+    background-image: url("../img/pic-1.png");
+    background-repeat: no-repeat;
     background-size: cover;
   }
 
   &_install {
     background-color: #1c3340;
-    background: url("../../img/pic-2.png") no-repeat;
+    background-image: url("../img/pic-2.png");
+    background-repeat: no-repeat;
     background-size: cover;
   }
 
   &_parts {
     background-color: #1c3340;
-    background: url("../../img/pic-3.png") no-repeat;
+    background-image: url("../img/pic-3.png");
+    background-repeat: no-repeat;
     background-size: cover;
   }
 
@@ -72,7 +76,7 @@
     width: 63px;
     height: 63px;
     position: absolute;
-    background: url("../../img/arrow-blue.png") no-repeat;
+    background: url("../img/arrow-blue.png") no-repeat;
     background-size: cover;
     right: 0;
     bottom: 0;
@@ -119,17 +123,17 @@
     }
 
     &_produce {
-      background: url("../../img/pic-1-tablet.png") no-repeat;
+      background: url("../img/pic-1-tablet.png") no-repeat;
       background-size: cover;
     }
 
     &_install {
-      background: url("../../img/pic-2-tablet.png") no-repeat;
+      background: url("../img/pic-2-tablet.png") no-repeat;
       background-size: cover;
     }
 
     &_parts {
-      background: url("../../img/pic-3-tablet.png") no-repeat;
+      background: url("../img/pic-3-tablet.png") no-repeat;
       background-size: cover;
       padding-top: 50px;
       min-height: 185px;
@@ -169,17 +173,17 @@
     margin-bottom: 30px;
 
     &_produce {
-      background: url("../../img/pic-1-mobile.png") no-repeat;
+      background: url("../img/pic-1-mobile.png") no-repeat;
       background-size: cover;
     }
 
     &_install {
-      background: url("../../img/pic-2-mobile.png") no-repeat;
+      background: url("../img/pic-2-mobile.png") no-repeat;
       background-size: cover;
     }
 
     &_parts {
-      background: url("../../img/pic-3-mobile.png") no-repeat;
+      background: url("../img/pic-3-mobile.png") no-repeat;
       background-size: cover;
       padding-top: 33px;
     }
