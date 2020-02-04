@@ -1,5 +1,6 @@
 'use strict';
 var modalCall = document.querySelector('.modal');
+var modalWindow = modalCall.querySelector('.modal__wrapper');
 var modalToggle = document.querySelector('.button__toggle');
 var modalClosed = document.querySelector('.modal__closed');
 var pageBody = document.querySelector('.page-body');
@@ -16,6 +17,7 @@ var showModal = function () {
   if (focusOnName) {
     focusOnName.focus();
   }
+  calculateModalTop();
 };
 
 var closeModal = function () {
@@ -26,11 +28,13 @@ var closeModal = function () {
     pageBody.classList.remove('scroll-hidden');
   }
 };
+
 if (modalToggle) {
   modalToggle.addEventListener('click', function () {
     showModal();
   });
 }
+
 if (modalClosed) {
   modalClosed.addEventListener('click', function () {
     closeModal();
@@ -47,6 +51,13 @@ document.addEventListener('mouseup', function (e) {
     closeModal();
   }
 });
+
+var calculateModalTop = function () {
+  var coordY = (document.body.clientWidth * 0.06);
+  modalWindow.style.top = coordY + 'px';
+  modalWindow.style.paddingTop = '1%';
+  modalWindow.style.paddingBottom = '1%';
+};
 
 // создание измененного поля копирайт и линий в подвале
 var cloneCopy = function () {
@@ -133,6 +144,37 @@ window.onresize = function () {
   }
   cloneCopy();
 };
+
+// чекбоксы
+var formCheckbox = document.querySelector('.form__checkbox');
+if (formCheckbox) {
+  var checkboxInputForm = formCheckbox.querySelector('.checkbox_input');
+  var checkedLabelForm = formCheckbox.querySelector('.checkbox_label');
+  formCheckbox.addEventListener('click', function () {
+    if (!checkboxInputForm.checked) {
+      checkedLabelForm.innerHTML = 'Для отправки формы необходимо согласие';
+      checkedLabelForm.style.color = 'red';
+    } else {
+      checkedLabelForm.innerHTML = 'Я согласен на обработку персональных данных';
+      checkedLabelForm.style.color = '#ffffff';
+    }
+  });
+}
+
+var modalCheckbox = document.querySelector('.modal__checkbox');
+if (modalCheckbox) {
+  var checkboxInputModal = modalCheckbox.querySelector('.checkbox_input');
+  var checkedLabelModal = modalCheckbox.querySelector('.checkbox_label');
+  modalCheckbox.addEventListener('click', function () {
+    if (!checkboxInputModal.checked) {
+      checkedLabelModal.innerHTML = 'Для отправки формы необходимо Ваше согласие';
+      checkedLabelModal.style.color = 'red';
+    } else {
+      checkedLabelModal.innerHTML = 'Я согласен на обработку персональных данных';
+      checkedLabelModal.style.color = '#ffffff';
+    }
+  });
+}
 
 // аккордеон
 var acc = document.getElementsByClassName('accordeon');

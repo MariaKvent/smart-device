@@ -47,6 +47,11 @@
   padding: 14px 50px;
   letter-spacing: 0.05em;
   margin-left: 186px;
+
+  &:hover {
+    background-color: $blue;
+    color: $white;
+  }
 }
 
 @media (max-width: $tablet) {

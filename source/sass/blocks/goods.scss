@@ -44,6 +44,11 @@
   margin-right: 2.6%;
   margin-bottom: 10px;
 
+  &:hover {
+    background-color: $blue;
+    opacity: 0.5;
+  }
+
 
   &:nth-child(3n) {
     margin-right: 0;

@@ -54,6 +54,12 @@
   margin-bottom: 29px;
   border-radius: 0;
   color: $white;
+  outline-color: $white;
+
+  &:hover {
+    background-color: #19baff;
+    opacity: 0.7;
+  }
 }
 
 .modal__inputs input::placeholder {
@@ -74,6 +80,12 @@
   resize: none;
   border-radius: 0;
   margin-bottom: 20px;
+  outline-color: $white;
+
+  &:hover {
+    background-color: #19baff;
+    opacity: 0.7;
+  }
 }
 
 .modal__form textarea::placeholder {
@@ -96,6 +108,11 @@
   border: 1px solid $white;
   border-radius: 5px;
   margin-bottom: 33px;
+
+  &:hover {
+    background-color: $blue;
+    opacity: 0.7;
+  }
 }
 
 .modal__checkbox {
@@ -104,9 +121,48 @@
   width: 375px;
   line-height: 15px;
   cursor: pointer;
+
+  &:hover {
+    background-color: $blue;
+    opacity: 0.7;
+  }
 }
 
-.modal__checkbox_label {
+.modal__checkbox_label-on {
+  position: relative;
+  font-size: 14px;
+  line-height: 15px;
+  color: $white;
+  opacity: 0.8;
+  padding-left: 45px;
+  cursor: pointer;
+
+  &::before {
+    position: absolute;
+    display: inline-block;
+    content: "";
+    width: 15px;
+    height: 15px;
+    background-color: transparent;
+    border: 1px solid #e5e5e5;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+  }
+
+  &::after {
+    position: absolute;
+    display: inline-block;
+    content: "";
+    width: 8px;
+    height: 5px;
+    top: 5px;
+    left: 4px;
+    background: url("../img/check.png") no-repeat 0 0;
+  }
+}
+
+.checkbox_label {
   position: relative;
   font-size: 14px;
   line-height: 15px;
@@ -184,6 +240,11 @@
 
   &::after {
     transform: rotate(-45deg);
+  }
+
+  &:hover {
+    background-color: $blue;
+    opacity: 0.7;
   }
 }
 

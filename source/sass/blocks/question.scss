@@ -3,9 +3,7 @@
   padding-right: 10px;
   padding-top: 92px;
   padding-bottom: 109px;
-  background: url("../img/bg-form.jpg") no-repeat;
   background-color: $blue;
-  background-size: cover;
 }
 
 .question__wrapper {
@@ -13,6 +11,22 @@
   justify-content: flex-end;
   max-width: 1170px;
   margin: 0 auto;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background: url("../img/plane.png") no-repeat;
+    left: -12%;
+    background-size: contain;
+    width: 85%;
+    height: 459px;
+  }
+}
+
+.question__about {
+  position: relative;
+  left: -10px;
 }
 
 .question__about h2 {
@@ -56,9 +70,15 @@
   margin-right: 25px;
   border-radius: 0;
   color: $white;
+  outline-color: $white;
 
   &:nth-child(2n) {
     margin-right: 0;
+  }
+
+  &:hover {
+    background-color: #19baff;
+    opacity: 0.7;
   }
 }
 
@@ -80,6 +100,12 @@
   resize: none;
   border-radius: 0;
   margin-bottom: 29px;
+  outline-color: $white;
+
+  &:hover {
+    background-color: #19baff;
+    opacity: 0.7;
+  }
 }
 
 .question__form textarea::placeholder {
@@ -97,11 +123,16 @@
   @include link($white);
   @include fonts(700, 14px, 16px);
   letter-spacing: 0.05em;
-  padding: 14px 79px;
+  padding: 14px 80px;
   background-color: transparent;
   border: 1px solid $white;
   border-radius: 5px;
   margin-bottom: 5px;
+
+  &:hover {
+    background-color: $blue;
+    opacity: 0.7;
+  }
 }
 
 .form__checkbox {
@@ -112,9 +143,14 @@
   cursor: pointer;
   display: flex;
   justify-content: space-between;
+
+  &:hover {
+    background-color: $blue;
+    opacity: 0.7;
+  }
 }
 
-.form__checkbox_label {
+.checkbox_label {
   position: relative;
   font-size: 14px;
   line-height: 15px;
@@ -183,6 +219,10 @@
     max-width: 622px;
     margin: 0 auto;
     justify-content: flex-start;
+
+    &::before {
+      display: none;
+    }
   }
 
   .question__about {
@@ -311,7 +351,7 @@
 
   .form__button {
     width: 290px;
-    padding: 14px 82px;
+    padding: 14px 40px;
     margin-bottom: 31px;
     font-size: 14px;
   }
