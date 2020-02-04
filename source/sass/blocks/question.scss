@@ -76,6 +76,10 @@
     margin-right: 0;
   }
 
+  &:required {
+    box-shadow: none;
+  }
+
   &:hover {
     background-color: #19baff;
     opacity: 0.7;
@@ -102,6 +106,10 @@
   margin-bottom: 29px;
   outline-color: $white;
 
+  &:required {
+    box-shadow: none;
+  }
+
   &:hover {
     background-color: #19baff;
     opacity: 0.7;
@@ -124,14 +132,30 @@
   @include fonts(700, 14px, 16px);
   letter-spacing: 0.05em;
   padding: 14px 80px;
+  outline: none;
   background-color: transparent;
   border: 1px solid $white;
   border-radius: 5px;
   margin-bottom: 5px;
+  box-shadow: none;
 
   &:hover {
     background-color: $blue;
     opacity: 0.7;
+    border: 1px solid $white;
+    outline: none;
+    box-shadow: none;
+    outline-offset: 0;
+  }
+
+  &:focus {
+    background-color: $white;
+    opacity: 0.9;
+    color: $blue;
+    border: 1px solid $blue;
+    outline: none;
+    box-shadow: none;
+    outline-offset: 0;
   }
 }
 
@@ -143,6 +167,10 @@
   cursor: pointer;
   display: flex;
   justify-content: space-between;
+
+  &:required {
+    box-shadow: none;
+  }
 
   &:hover {
     background-color: $blue;

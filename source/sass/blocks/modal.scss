@@ -56,6 +56,10 @@
   color: $white;
   outline-color: $white;
 
+  &:required {
+    box-shadow: none;
+  }
+
   &:hover {
     background-color: #19baff;
     opacity: 0.7;
@@ -81,6 +85,10 @@
   border-radius: 0;
   margin-bottom: 20px;
   outline-color: $white;
+
+  &:required {
+    box-shadow: none;
+  }
 
   &:hover {
     background-color: #19baff;
@@ -108,10 +116,25 @@
   border: 1px solid $white;
   border-radius: 5px;
   margin-bottom: 33px;
+  box-shadow: none;
 
   &:hover {
     background-color: $blue;
     opacity: 0.7;
+    border: 1px solid $white;
+    outline: none;
+    box-shadow: none;
+    outline-offset: 0;
+  }
+
+  &:focus {
+    background-color: $white;
+    opacity: 0.9;
+    color: $blue;
+    border: 1px solid $blue;
+    outline: none;
+    box-shadow: none;
+    outline-offset: 0;
   }
 }
 
@@ -121,6 +144,10 @@
   width: 375px;
   line-height: 15px;
   cursor: pointer;
+
+  &:required {
+    box-shadow: none;
+  }
 
   &:hover {
     background-color: $blue;
