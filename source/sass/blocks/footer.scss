@@ -201,6 +201,7 @@
   .footer__about {
     padding: 20px 0 36px;
     justify-content: space-between;
+    overflow-x: hidden;
   }
 
   .footer__about-main {
@@ -280,6 +281,7 @@
     padding: 50px 0 0;
     justify-content: space-between;
     flex-direction: column;
+    width: 100%;
   }
 
   .footer__about-main {

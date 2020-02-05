@@ -62,7 +62,7 @@ var calculateModalTop = function () {
 // создание измененного поля копирайт и линий в подвале
 var cloneCopy = function () {
   if (footerAboutMain) {
-    if (document.body.clientWidth < 767) {
+    if (window.screen.width < 767) {
       if (footerAboutMain.querySelector('.clone__lines') === null) {
         var clonedNode2 = document.createElement('hr');
         clonedNode2.className = 'clone__lines';
@@ -90,7 +90,7 @@ var cloneCopy = function () {
         startButton.innerHTML = 'Получить бесплатную консультацию';
       }
     }
-    if (document.body.clientWidth < 1024) {
+    if (window.screen.width < 1024) {
 
       if (footerAboutMain.querySelector('.clone__lines') === null) {
         var clonedNode = document.createElement('hr');
