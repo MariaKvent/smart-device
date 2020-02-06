@@ -53,16 +53,36 @@ document.addEventListener('mouseup', function (e) {
 });
 
 var calculateModalTop = function () {
-  var coordY = (document.body.clientWidth * 0.06);
-  modalWindow.style.top = coordY + 'px';
-  modalWindow.style.paddingTop = '1%';
-  modalWindow.style.paddingBottom = '1%';
+  // var modalHeader = modalWindow.querySelector('.modal__header');
+  var modalPar = modalWindow.querySelector('.modal__par');
+  var checkedLabelModal = modalCheckbox.querySelector('.checkbox_label');
+  if (window.screen.width < 1300) {
+    var coordY = (document.body.clientWidth * 0.03);
+    modalWindow.style.top = coordY + 'px';
+    modalWindow.style.transform = 'scale(0.8)';
+    modalPar.style.fontSize = '14px';
+    checkedLabelModal.style.fontSize = '12px';
+    checkedLabelModal.style.paddingLeft = '30px';
+
+  } else {
+    if (window.screen.width < 1700) {
+      coordY = (document.body.clientWidth * 0.06);
+      modalWindow.style.top = coordY + 'px';
+      modalWindow.style.transform = 'scale(0.9)';
+      modalPar.style.fontSize = '16px';
+      checkedLabelModal.style.fontSize = '14px';
+    } else {
+      modalWindow.style.top = '132px';
+      modalWindow.style.transform = 'scale(1)';
+      modalPar.style.fontSize = '16px';
+    }
+  }
 };
 
 // создание измененного поля копирайт и линий в подвале
 var cloneCopy = function () {
   if (footerAboutMain) {
-    if (window.screen.width < 767) {
+    if (window.screen.width < 768) {
       if (footerAboutMain.querySelector('.clone__lines') === null) {
         var clonedNode2 = document.createElement('hr');
         clonedNode2.className = 'clone__lines';
@@ -143,6 +163,7 @@ window.onresize = function () {
     }
   }
   cloneCopy();
+  calculateModalTop();
 };
 
 // чекбоксы
